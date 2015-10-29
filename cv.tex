@@ -1,0 +1,79 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[svgnames]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\pagestyle{empty}
+
+\definecolor{shadecolor}{gray}{0.93}  % Inner background color of title bars
+
+\raggedright
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+\newcommand{\resheading}[1]{\vspace{12pt}
+    \setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolor}{shadecolor}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4}
+\end{tabular*}\vspace{-6pt}}
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Gustavo Zambonin} & \texttt{+}55 (48) 9696 3133 \\
+Av. Francisco Roberto da Silva, 925 & \texttt{gustavo.zambonin at grad.ufsc.br} \\
+Biguaçu - SC (88160-284) & \texttt{\href{http://github.com/zambonin}{github.com/zambonin}}
+\end{tabular*}\vspace{8pt}
+
+\resheading{Formação acadêmica}
+\begin{itemize}
+    \item \ressubheading{Universidade Federal de Santa Catarina}{Florianópolis, SC}{Bacharelado em Ciência da Computação}{2013 - atualmente}
+    \begin{itemize}
+        \item Previsão para conclusão: 2018
+    \end{itemize}
+\end{itemize}
+
+\resheading{Experiência profissional}
+\begin{itemize}
+    \item \ressubheading{Monitoria}{UFSC}{Probabilidade e Estatística}{2014 - 2015}
+    \begin{itemize}
+        \item Análise exploratória de dados, cálculo de probabilidades de eventos, variáveis aleatórias discretas e contínuas, distribuições amostrais e estimação de parâmetros.
+    \end{itemize}
+    \item \ressubheading{Monitoria}{UFSC}{Introdução à Ciência da Computação}{2015}
+    \begin{itemize}
+        \item Implementação de algoritmos em linguagens de programação (C, Java, Pascal, Python), estruturas de seleção e repetição, declaração e indexação de variáveis, compilação e execução de programas, entrada e saída de dados.
+        \item Ementa equivalente ou similar a Computação Científica I, Introdução à Computação, Programação Orientada a Objetos I e Introdução à Programação Orientada a Objetos.
+    \end{itemize}
+\end{itemize}
+
+\resheading{Qualificações e atividades complementares}
+\begin{itemize}
+    \item Inglês avançado (ótima comunicação escrita e boa comunicação oral).
+    \item Ministrante do minicurso \textit{A análise de dados usando o SEstatNet (Sistema de Ensino-Aprendizagem de Estatística via web)} na 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h).
+    \item Conhecimento intermediário em: \texttt{bash}, C, C\texttt{++}, Java, \LaTeX, Python.
+    \begin{itemize}
+        \item \vspace{-6pt} \textit{Frameworks} para Python: \href{https://github.com/burnash/gspread}{gspread}, \href{http://matplotlib.org/}{matplotlib}, \href{http://www.numpy.org/}{NumPy}, \href{http://docs.python-requests.org/en/latest/#}{Requests}, \href{http://www.scipy.org/}{SciPy}, \href{http://scrapy.org/}{Scrapy}.
+    \end{itemize}
+    \item Conhecimento básico em: \\
+    Assembly MIPS, AWK, \texttt{bc}, Haskell, HTML, JavaScript, Julia, Pascal, Perl, Prolog, \texttt{sed}, VHDL.
+\end{itemize}
+
+\end{document}
