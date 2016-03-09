@@ -1,115 +1,124 @@
+% loosely based on:
+% http://texblog.org/2012/04/25/writing-a-cv-in-latex/
+
 \documentclass[11pt]{article}
 
 \usepackage{array, xcolor}
+\usepackage[brazil]{babel}
 \usepackage[margin=1cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
+\usepackage[colorlinks, urlcolor={blue!80!black}]{hyperref}
 
 \pagestyle{empty}
 
-\newcommand \grayrule{\color{lightgray} \vrule}
-\newcommand \last{\leftskip0.5cm $\ast$ }
-\newcolumntype{L}{>{\raggedleft}p{0.18\textwidth}}
-\newcolumntype{R}{p{0.79\textwidth}}
+\newenvironment{headertable}{
+    \hspace{-0.9cm}
+    \begin{tabular*}{20.1cm}{l@{\extracolsep{\fill}}r}
+}{\end{tabular*}}
+
+\newenvironment{contenttable}{
+    \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
+    \newcolumntype{R}{p{0.84\textwidth}}
+    \begin{tabular}{L!{\color{lightgray} \vrule}R}
+}{\end{tabular}
+}
+
+\newenvironment{smallitem}{
+    \vspace{-2mm}
+    \begin{itemize}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{2pt}
+}{\vspace{-4mm} \end{itemize}}
 
 \begin{document}
 
-\hspace{-0.9cm}
-\begin{tabular*}{20.1cm}{l@{\extracolsep{\fill}}r}
-
-\textbf{\Large Gustavo Zambonin}
-& \texttt{+}55 (48) 9696 3133 \\
-Av. Francisco Roberto da Silva, 925
-& \texttt{gustavo.zambonin at grad.ufsc.br} \\
-Biguaçu - SC (88160-284)
-& \texttt{\href{http://github.com/zambonin}{github.com/zambonin}}
-\end{tabular*}
+\begin{headertable}
+\bf \Large Gustavo Zambonin         & \texttt{+}55 (48) 9696 3133            \\
+Av. Francisco Roberto da Silva, 925 & \texttt{gustavo.zambonin@grad.ufsc.br} \\
+Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
+\end{headertable}
 
 \section*{Formação acadêmica}
-\begin{tabular}{>{\bf}L!{\grayrule}R}
+\begin{contenttable}
+    2013 -- atualmente & \textbf{Bacharelado em Ciência da Computação}
+    \begin{smallitem}
+        \item Universidade Federal de Santa Catarina, Florianópolis/SC
+        \item Previsão para conclusão: 2018
+    \end{smallitem}
+\end{contenttable}
 
-     2013 --
-  atualmente & \textbf{Bacharelado em Ciência da Computação} \\
-             & \last Universidade Federal de Santa Catarina,
-             Florianópolis/SC \\
-             & \last Previsão para conclusão: 2018 \\
-\end{tabular}
-
+\vspace{-4mm}
 \section*{Experiência profissional}
-\begin{tabular}{>{\bf}L!{\grayrule}R}
+\begin{contenttable}
+    2014 -- 2015 & \textbf{Monitoria} (Probabilidade e Estatística)
+    \begin{smallitem}
+        \item Análise exploratória de dados, cálculo de probabilidades de
+        eventos, variáveis aleatórias discretas e contínuas, distribuições
+        amostrais e estimação de parâmetros.
+    \end{smallitem} \\
 
-2014 -- 2015 & \textbf{Monitoria} (Probabilidade e Estatística) \\
-             & \last Análise exploratória de dados, cálculo de probabilidades
-             de eventos, variáveis aleatórias discretas e contínuas,
-             distribuições amostrais e estimação de parâmetros.
-             \\ [10pt]
+    2015 & \textbf{Monitoria} (Introdução à Ciência da Computação -- voluntário)
+    \begin{smallitem}
+        \item Implementação de algoritmos em linguagens de programação (C,
+        Java, Pascal, Python), estruturas de seleção e repetição, declaração e
+        indexação de variáveis, compilação e execução de programas, entrada e
+        saída de dados.
+        \item Ementa similar a Computação Científica I, Introdução à
+        Computação, Programação Orientada a Objetos I e Introdução à
+        Programação Orientada a Objetos.
+    \end{smallitem}
+\end{contenttable}
 
-        2015 & \textbf{Monitoria} (Introdução à Ciência da Computação --
-             voluntário) \\
-             & \last Implementação de algoritmos em linguagens
-             de programação (C, Java, Pascal, Python), estruturas de seleção e
-             repetição, declaração e indexação de variáveis, compilação e
-             execução de programas, entrada e saída de dados. \\
-             & \last Ementa equivalente ou similar a Computação
-             Científica I, Introdução à Computação, Programação Orientada a
-             Objetos I e Introdução à Programação Orientada a Objetos.
-\end{tabular}
+\vspace{-4mm}
+\section*{Atividades extracurriculares}
+\begin{contenttable}
+    2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
+    \begin{smallitem}
+        \item Organizado por PET Computação (6h)
+        \item Introdução ao funcionamento de sistemas operacionais do tipo
+        GNU/Linux e suas diferenças, comandos básicos e gerenciamento de
+        arquivos, redirecionamento de entrada e saída de comandos, segurança do
+        sistema de arquivos, processos e programas em execução.
+    \end{smallitem} \\
 
-\section*{Atividades extra-curriculares}
-\begin{tabular}{>{\bf}L!{\grayrule}R}
+    2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet (Sistema
+    de Ensino-Aprendizagem de Estatística via web)
+    \begin{smallitem}
+        \item 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h)
+        \item Tópicos abordados: A filosofia da descrição e exploração de
+        dados. Apresentação do SEstatNet. Descrição e exploração de dados uni-
+        e bi-variados usando o SEstatNet.
+    \end{smallitem}
+\end{contenttable}
 
-        2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário) \\
-             & \last Organizado por PET Computação (6h) \\
-             & \last Introdução ao funcionamento de sistemas operacionais do
-             tipo GNU/Linux e suas diferenças, comandos básicos e gerenciamento
-             de arquivos, redirecionamento de entrada e saída de comandos,
-             segurança do sistema de arquivos, processos e programas em
-             execução. \\ [10pt]
-
-        2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
-             (Sistema de Ensino-Aprendizagem de Estatística via web) \\
-             & \last 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da
-             UFSC (4h) \\
-             & \last Tópicos abordados: A filosofia da descrição e exploração
-             de dados. Apresentação do SEstatNet. Descrição e exploração de
-             dados uni e bi-variados usando o SEstatNet.
-\end{tabular}
-
+\vspace{-4mm}
 \section*{Qualificações}
-\begin{tabular}{>{\bf}L!{\grayrule}R}
+\begin{contenttable}
+    Programação & \textbf{Nível intermediário}:
+    \begin{smallitem}
+        \item \texttt{bash}, C, C\texttt{++}, Google Sheets (fórmulas e
+        JavaScript), Java, \LaTeX, \texttt{sh}
+        \item Python: \href{https://github.com/burnash/gspread}{gspread},
+        \href{http://matplotlib.org/}{matplotlib},
+        \href{http://www.numpy.org/}{NumPy},
+        \href{http://docs.python-requests.org/en/latest/#}{Requests},
+        \href{https://github.com/jmcarp/robobrowser}{RoboBrowser},
+        \href{http://www.scipy.org/}{SciPy},
+        \href{http://scrapy.org/}{Scrapy}
+    \end{smallitem} \\
 
- Programação & \textbf{Nível intermediário}: \\
-             & \last \texttt{bash}, C, C\texttt{++}, Google Sheets (fórmulas e
-             JavaScript), Java, \LaTeX, \texttt{sh} \\
-             & \last Python:
-                \href{https://github.com/burnash/gspread}{gspread},
-                \href{http://matplotlib.org/}{matplotlib},
-                \href{http://www.numpy.org/}{NumPy},
-                \href{http://docs.python-requests.org/en/latest/#}{Requests},
-                \href{https://github.com/jmcarp/robobrowser}{RoboBrowser},
-                \href{http://www.scipy.org/}{SciPy},
-                \href{http://scrapy.org/}{Scrapy} \\
-             & \textbf{Nível básico}: \\
-             & \last AWK, \texttt{bc}, Haskell, Julia, Pascal, Prolog,
-             \texttt{sed} \\ [10pt]
+    & \textbf{Nível básico}:
+    \begin{smallitem}
+        \item AWK, \texttt{bc}, Haskell, Julia, Pascal, Prolog, \texttt{sed}
+    \end{smallitem} \\
 
-     Línguas & \textbf{Português (Brasil)} -- língua nativa \\
-             & \textbf{Inglês} -- Proficiência operacional \\
-             & \last CEFR B2 em \textit{listening
-             comprehension} \\
-             & \last CEFR C1 em \textit{structure and written
-             expression} \\
-             & \last CEFR C1 em \textit{reading
-             comprehension} \\
-\end{tabular}
+    Línguas & \textbf{Português (Brasil)} -- língua nativa \\
+    & \textbf{Inglês} -- Proficiência operacional
+    \begin{smallitem}
+        \item CEFR B2 em \textit{listening comprehension}
+        \item CEFR C1 em \textit{structure and written expression}
+        \item CEFR C1 em \textit{reading comprehension}
+    \end{smallitem}
+\end{contenttable}
 
 \end{document}
-
-% loosely based on:
-% http://texblog.org/2012/04/25/writing-a-cv-in-latex/
