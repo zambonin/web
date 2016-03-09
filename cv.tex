@@ -14,13 +14,16 @@
 \newenvironment{headertable}{
     \hspace{-0.9cm}
     \begin{tabular*}{20.1cm}{l@{\extracolsep{\fill}}r}
-}{\end{tabular*}}
+}{
+    \end{tabular*}
+}
 
 \newenvironment{contenttable}{
     \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
     \newcolumntype{R}{p{0.84\textwidth}}
     \begin{tabular}{L!{\color{lightgray} \vrule}R}
-}{\end{tabular}
+}{
+    \end{tabular}
 }
 
 \newenvironment{smallitem}{
@@ -28,7 +31,11 @@
     \begin{itemize}
     \setlength{\parskip}{0pt}
     \setlength{\itemsep}{2pt}
-}{\vspace{-4mm} \end{itemize}}
+}{
+    \vspace{-4mm} \end{itemize}
+}
+
+\newcommand{\customsec}[1]{\vspace{-4mm} \section*{#1}}
 
 \begin{document}
 
@@ -38,7 +45,7 @@ Av. Francisco Roberto da Silva, 925 & \texttt{gustavo.zambonin@grad.ufsc.br} \\
 Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
 \end{headertable}
 
-\section*{Formação acadêmica}
+\customsec{Formação acadêmica}
 \begin{contenttable}
     2013 -- atualmente & \textbf{Bacharelado em Ciência da Computação}
     \begin{smallitem}
@@ -47,8 +54,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
     \end{smallitem}
 \end{contenttable}
 
-\vspace{-4mm}
-\section*{Experiência profissional}
+\customsec{Experiência profissional}
 \begin{contenttable}
     2014 -- 2015 & \textbf{Monitoria} (Probabilidade e Estatística)
     \begin{smallitem}
@@ -69,8 +75,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
     \end{smallitem}
 \end{contenttable}
 
-\vspace{-4mm}
-\section*{Atividades extracurriculares}
+\customsec{Atividades extracurriculares}
 \begin{contenttable}
     2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
     \begin{smallitem}
@@ -91,8 +96,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
     \end{smallitem}
 \end{contenttable}
 
-\vspace{-4mm}
-\section*{Qualificações}
+\customsec{Qualificações}
 \begin{contenttable}
     Programação & \textbf{Nível intermediário}:
     \begin{smallitem}
