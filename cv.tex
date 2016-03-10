@@ -1,25 +1,24 @@
-% loosely based on:
-% http://texblog.org/2012/04/25/writing-a-cv-in-latex/
+% loosely based on: http://texblog.org/2012/04/25/writing-a-cv-in-latex/
 
-\documentclass[11pt]{article}
+\documentclass{article}
 
 \usepackage{array, xcolor}
 \usepackage[brazil]{babel}
 \usepackage[margin=1cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[colorlinks, urlcolor={blue!80!black}]{hyperref}
+\usepackage[colorlinks, urlcolor={blue!70!black}]{hyperref}
 
 \pagestyle{empty}
 
 \newenvironment{headertable}{
-    \hspace{-0.9cm}
-    \begin{tabular*}{20.1cm}{l@{\extracolsep{\fill}}r}
+    \hspace{-0.81cm}
+    \begin{tabular*}{19.86cm}{l@{\extracolsep{\fill}}r}
 }{
     \end{tabular*}
 }
 
 \newenvironment{contenttable}{
-    \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
+    \newcolumntype{L}{>{\bf \raggedleft}p{0.12\textwidth}}
     \newcolumntype{R}{p{0.84\textwidth}}
     \begin{tabular}{L!{\color{lightgray} \vrule}R}
 }{
@@ -27,24 +26,24 @@
 }
 
 \newenvironment{smallitem}{
-    \vspace{-2mm} \begin{itemize}
+    \vspace{-2mm}
+    \begin{itemize}
     \setlength{\parskip}{0pt}
     \setlength{\itemsep}{2pt}
 }{
-    \vspace{-3mm} \end{itemize}
+    \vspace{-2mm}
+    \end{itemize}
 }
-
-\newcommand{\customsec}[1]{\vspace{-4mm} \section*{#1}}
 
 \begin{document}
 
 \begin{headertable}
-\bf \Large Gustavo Zambonin         & \texttt{+}55 (48) 9696 3133            \\
-Av. Francisco Roberto da Silva, 925 & \texttt{gustavo.zambonin@grad.ufsc.br} \\
-Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
+\bf \Large Gustavo Zambonin         & \verb!+!55 (48) 9696 3133            \\
+Av. Francisco Roberto da Silva, 925 & \verb!gustavo.zambonin@grad.ufsc.br! \\
+Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
 \end{headertable}
 
-\customsec{Formação acadêmica}
+\section*{Formação acadêmica}
 \begin{contenttable}
     2013 -- atualmente & \textbf{Bacharelado em Ciência da Computação}
     \begin{smallitem}
@@ -53,7 +52,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
     \end{smallitem}
 \end{contenttable}
 
-\customsec{Experiência profissional}
+\section*{Experiência profissional}
 \begin{contenttable}
     2015 & \textbf{Monitoria} (Introdução à Ciência da Computação -- voluntário)
     \begin{smallitem}
@@ -74,20 +73,21 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
     \end{smallitem}
 \end{contenttable}
 
-\customsec{Atividades extracurriculares}
+\section*{Atividades extracurriculares}
 \begin{contenttable}
     2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
     \begin{smallitem}
         \item Organizado por PET Computação (6h)
         \item Introdução ao funcionamento de sistemas operacionais do tipo
         GNU/Linux e suas diferenças, comandos básicos e gerenciamento de
-        arquivos, redirecionamento de entrada e saída de comandos, segurança do
-        sistema de arquivos, processos e programas em execução.
+        arquivos, redirecionamento de entrada e saída de comandos, segurança
+        do sistema de arquivos, processos e programas em execução.
     \end{smallitem} \\
 
-    2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet (Sistema
-    de Ensino-Aprendizagem de Estatística via web)
+    2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
     \begin{smallitem}
+        \item Sistema de Ensino-Aprendizagem de Estatística via web --
+        \url{http://sestatnet.ufsc.br/}
         \item 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h)
         \item Tópicos abordados: A filosofia da descrição e exploração de
         dados. Apresentação do SEstatNet. Descrição e exploração de dados uni-
@@ -95,12 +95,12 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
     \end{smallitem}
 \end{contenttable}
 
-\customsec{Qualificações}
+\section*{Qualificações}
 \begin{contenttable}
     Programação & \textbf{Nível intermediário}:
     \begin{smallitem}
-        \item \texttt{bash}, C, C\texttt{++}, Google Sheets (fórmulas e
-        JavaScript), Java, \LaTeX, \texttt{sh}
+        \item \verb!bash!, C, C\verb!++!, Google Sheets (fórmulas e
+        JavaScript), Java, \LaTeX, \verb!sh!
         \item Python: \href{https://github.com/burnash/gspread}{gspread},
         \href{http://matplotlib.org/}{matplotlib},
         \href{http://www.numpy.org/}{NumPy},
@@ -112,7 +112,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}      \\
 
     & \textbf{Nível básico}:
     \begin{smallitem}
-        \item AWK, \texttt{bc}, Haskell, Julia, Pascal, Prolog, \texttt{sed}
+        \item AWK, \verb!bc!, Haskell, Julia, Pascal, Prolog, \verb!sed!
     \end{smallitem} \\
 
     Línguas & \textbf{Português (Brasil)} -- língua nativa \\
