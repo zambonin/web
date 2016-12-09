@@ -2,24 +2,16 @@
 
 \documentclass{article}
 
-\usepackage{array, xcolor}
 \usepackage[brazil]{babel}
 \usepackage[a4paper, margin=1cm]{geometry}
 \usepackage[colorlinks, urlcolor={blue!70!black}]{hyperref}
 \usepackage[utf8]{inputenc}
+\usepackage{array, xcolor}
 
-\pagestyle{empty}
-
-\newenvironment{headertable}{
-    \hspace{-0.81cm}
-    \begin{tabular*}{19.3cm}{l@{\extracolsep{\fill}}r}
-}{
-    \end{tabular*}
-}
-
-\newenvironment{contenttable}{
-    \newcolumntype{L}{>{\bf \raggedleft}p{0.12\textwidth}}
-    \newcolumntype{R}{p{0.84\textwidth}}
+\newenvironment{contenttable}[1]{
+    \section*{#1}
+    \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
+    \newcolumntype{R}{p{0.82\textwidth}}
     \begin{tabular}{L!{\color{lightgray} \vrule}R}
 }{
     \end{tabular}
@@ -37,14 +29,19 @@
 
 \begin{document}
 
-\begin{headertable}
-\bf \Large Gustavo Zambonin         & \verb!+!55 (48) 9696 3133            \\
-Av. Francisco Roberto da Silva, 925 & \verb!gustavo.zambonin@grad.ufsc.br! \\
-Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
-\end{headertable}
+\begin{tabular}{@{\hspace{-5mm}}l}
+    {\Large \textbf{Gustavo Zambonin}} \\
+    Av. Francisco Roberto da Silva, 925 \\
+    Biguaçu/SC (88160-284)
+\end{tabular}
+\hfill
+\begin{tabular}{r}
+    \verb!+!55 (48) 99696 3133 \\
+    \verb!gustavo.zambonin@grad.ufsc.br! \\
+    \url{https://github.com/zambonin}
+\end{tabular}
 
-\section*{Formação acadêmica}
-\begin{contenttable}
+\begin{contenttable}{Formação acadêmica}
     2013 -- atualmente & \textbf{Bacharelado em Ciência da Computação}
     \begin{smallitem}
         \item Universidade Federal de Santa Catarina, Florianópolis/SC
@@ -52,9 +49,9 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
     \end{smallitem}
 \end{contenttable}
 
-\section*{Experiência profissional}
-\begin{contenttable}
-    2015 & \textbf{Monitoria} (Introdução à Ciência da Computação -- voluntário)
+\begin{contenttable}{Experiência profissional}
+    Mar/2015 -- Ago/2015 & \textbf{Monitoria} (Introdução à Ciência da
+        Computação -- voluntário)
     \begin{smallitem}
         \item Implementação de algoritmos em linguagens de programação (C,
         Java, Pascal, Python), estruturas de seleção e repetição, declaração e
@@ -65,7 +62,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
         Programação Orientada a Objetos.
     \end{smallitem} \\
 
-    2014 -- 2015 & \textbf{Monitoria} (Probabilidade e Estatística)
+    Jul/2014 -- Ago/2015 & \textbf{Monitoria} (Probabilidade e Estatística)
     \begin{smallitem}
         \item Análise exploratória de dados, cálculo de probabilidades de
         eventos, variáveis aleatórias discretas e contínuas, distribuições
@@ -73,9 +70,8 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
     \end{smallitem}
 \end{contenttable}
 
-\section*{Atividades extracurriculares}
-\begin{contenttable}
-    2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
+\begin{contenttable}{Atividades extracurriculares}
+    Abr/2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
     \begin{smallitem}
         \item Organizado por PET Computação (6h)
         \item Introdução ao funcionamento de sistemas operacionais do tipo
@@ -84,7 +80,7 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
         do sistema de arquivos, processos e programas em execução.
     \end{smallitem} \\
 
-    2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
+    Out/2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
     \begin{smallitem}
         \item Sistema de Ensino-Aprendizagem de Estatística via web --
         \url{http://sestatnet.ufsc.br/}
@@ -92,15 +88,21 @@ Biguaçu/SC (88160-284)              & \url{https://github.com/zambonin}    \\
         \item Tópicos abordados: A filosofia da descrição e exploração de
         dados. Apresentação do SEstatNet. Descrição e exploração de dados uni-
         e bi-variados usando o SEstatNet.
+    \end{smallitem} \\
+
+    Out/2013 & \textbf{Participante:} SECCOM {\small (Semana Acadêmica de
+        Ciência da Computação e Sistemas de Informação)}
+    \begin{smallitem}
+        \item Organizado por PET Computação (10h)
+        \item Palestras sobre temas diversos relacionados aos cursos.
     \end{smallitem}
 \end{contenttable}
 
-\section*{Qualificações}
-\begin{contenttable}
+\begin{contenttable}{Qualificações}
     Programação & \textbf{Nível intermediário}:
     \begin{smallitem}
         \item \verb!bash!, C, C\verb!++!, Google Sheets (fórmulas e
-        JavaScript), Java, \LaTeX, \verb!sh!
+        JavaScript), Java, \LaTeX
         \item Python: \href{https://github.com/burnash/gspread}{gspread},
         \href{http://matplotlib.org/}{matplotlib},
         \href{http://www.numpy.org/}{NumPy},
