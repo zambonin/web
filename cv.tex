@@ -8,133 +8,128 @@
 \usepackage[utf8]{inputenc}
 \usepackage{array, xcolor}
 
-\newenvironment{contenttable}[1]{
-    \section*{#1}
-    \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
-    \newcolumntype{R}{p{0.82\textwidth}}
-    \begin{tabular}{L!{\color{lightgray} \vrule}R}
-}{
-    \end{tabular}
-}
+\newenvironment{contenttable}[1]
+  {\section*{#1}
+   \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
+   \newcolumntype{R}{p{0.82\textwidth}}
+   \begin{tabular}{L!{\color{lightgray} \vrule}R}}
+  {\end{tabular}}
 
-\newenvironment{smallitem}{
-    \vspace{-2mm}
-    \begin{itemize}
-    \setlength{\parskip}{0pt}
-    \setlength{\itemsep}{2pt}
-}{
-    \vspace{-2mm}
-    \end{itemize}
-}
+\newenvironment{smallitem}
+  {\vspace{-2mm}\itemize%
+   \setlength{\parskip}{0pt}
+   \setlength{\itemsep}{2pt}}
+  {\vspace{-2mm}\enditemize}
 
 \begin{document}
 
 \begin{tabular}{@{\hspace{-5mm}}l}
-    {\Large \textbf{Gustavo Zambonin}} \\
-    Av. Francisco Roberto da Silva, 925 \\
-    Biguaçu/SC (88160-284)
+  {\Large \textbf{Gustavo Zambonin}}    \\
+  Av. Francisco Roberto da Silva, 925   \\
+  Biguaçu/SC (88160--284)
 \end{tabular}
 \hfill
 \begin{tabular}{r}
-    \verb!+!55 (48) 99997 3940 \\
-    \verb!gustavo.zambonin@grad.ufsc.br! \\
-    \url{https://github.com/zambonin}
+  \verb!+!55 (48) 99997 3940            \\
+  \verb!gustavo.zambonin@grad.ufsc.br!  \\
+  \url{https://github.com/zambonin}
 \end{tabular}
 
 \begin{contenttable}{Formação acadêmica}
-    2013 -- atualmente & \textbf{Bacharelado em Ciência da Computação}
-    \begin{smallitem}
-        \item Universidade Federal de Santa Catarina, Florianópolis/SC
-        \item Previsão para conclusão: 2018
-        \item \url{http://lattes.cnpq.br/8192345791741876}
-    \end{smallitem}
+  2013 --- atualmente & \textbf{Bacharelado em Ciência da Computação}
+  \begin{smallitem}
+    \item Universidade Federal de Santa Catarina, Florianópolis/SC
+    \item Previsão para conclusão: 2018
+    \item \url{http://lattes.cnpq.br/8192345791741876}
+  \end{smallitem}
 \end{contenttable}
 
 \begin{contenttable}{Experiência profissional}
-    Mar/2015 -- Ago/2015 & \textbf{Monitoria} (Introdução à Ciência da
-        Computação -- voluntário)
-    \begin{smallitem}
-        \item Implementação de algoritmos em linguagens de programação (C,
-        Java, Pascal, Python), estruturas de seleção e repetição, declaração e
-        indexação de variáveis, compilação e execução de programas, entrada e
-        saída de dados.
-        \item Ementa similar a Computação Científica I, Introdução à
-        Computação, Programação Orientada a Objetos I e Introdução à
-        Programação Orientada a Objetos.
-    \end{smallitem} \\
+  Mar/2015 --- Ago/2015 & \textbf{Monitoria}
+    (Introdução à Ciência da Computação --- voluntário)
+  \begin{smallitem}
+    \item Implementação de algoritmos em linguagens de programação (C,
+      Java, Pascal, Python), estruturas de seleção e repetição, declaração e
+      indexação de variáveis, compilação e execução de programas, entrada e
+      saída de dados.
+    \item Ementa similar a Computação Científica I, Introdução à
+      Computação, Programação Orientada a Objetos I e Introdução à
+      Programação Orientada a Objetos.
+  \end{smallitem} \\
 
-    Jul/2014 -- Ago/2015 & \textbf{Monitoria} (Probabilidade e Estatística)
-    \begin{smallitem}
-        \item Análise exploratória de dados, cálculo de probabilidades de
-        eventos, variáveis aleatórias discretas e contínuas, distribuições
-        amostrais e estimação de parâmetros.
-    \end{smallitem}
+  Jul/2014 --- Ago/2015 & \textbf{Monitoria} (Probabilidade e Estatística)
+  \begin{smallitem}
+    \item Análise exploratória de dados, cálculo de probabilidades de
+      eventos, variáveis aleatórias discretas e contínuas, distribuições
+      amostrais e estimação de parâmetros.
+  \end{smallitem}
 \end{contenttable}
 
 \begin{contenttable}{Atividades extracurriculares}
-    Jul/2016 & \textbf{Participante}: \emph{Workshop in Combinatorics and
-        Finite Fields in Cryptography and Codes}
-    \begin{smallitem}
-        \item Organizado por LabSEC/UFSC (16h) --
-        \url{http://cffcc.labsec.ufsc.br/}
-        \item Tópicos abordados: criptografia, segurança, criptografia
-        combinatorial, corpos finitos, design combinatorial, teoria
-        de códigos, e áreas relacionadas.
-    \end{smallitem} \\
+  Jul/2016 & \textbf{Participante}: \emph{Workshop in Combinatorics and
+    Finite Fields in Cryptography and Codes}
+  \begin{smallitem}
+    \item Organizado por LabSEC/UFSC (16h) ---
+      \url{http://cffcc.labsec.ufsc.br/}
+    \item Tópicos abordados: criptografia, segurança, criptografia
+      combinatorial, corpos finitos, design combinatorial, teoria
+      de códigos, e áreas relacionadas.
+  \end{smallitem} \\
 
-    Abr/2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
-    \begin{smallitem}
-        \item Organizado por PET Computação (6h)
-        \item Introdução ao funcionamento de sistemas operacionais do tipo
-        GNU/Linux e suas diferenças, comandos básicos e gerenciamento de
-        arquivos, redirecionamento de entrada e saída de comandos, segurança
-        do sistema de arquivos, processos e programas em execução.
-    \end{smallitem} \\
+  Abr/2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
+  \begin{smallitem}
+    \item Organizado por PET Computação (6h) ---
+      \url{http://pet.inf.ufsc.br/seccom/}
+    \item Introdução ao funcionamento de sistemas operacionais do tipo
+      GNU/Linux e suas diferenças, comandos básicos e gerenciamento de
+      arquivos, redirecionamento de entrada e saída de comandos, segurança
+      do sistema de arquivos, processos e programas em execução.
+  \end{smallitem} \\
 
-    Out/2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
-    \begin{smallitem}
-        \item Sistema de Ensino-Aprendizagem de Estatística via web --
-        \url{http://sestatnet.ufsc.br/}
-        \item 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h)
-        \item Tópicos abordados: A filosofia da descrição e exploração de
-        dados. Apresentação do SEstatNet. Descrição e exploração de dados uni-
-        e bi-variados usando o SEstatNet.
-    \end{smallitem} \\
+  Out/2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
+  \begin{smallitem}
+    \item Sistema de Ensino-Aprendizagem de Estatística via web ---
+      \url{http://sestatnet.ufsc.br/}
+    \item 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h)
+    \item Tópicos abordados: A filosofia da descrição e exploração de
+      dados. Apresentação do SEstatNet. Descrição e exploração de dados uni-
+      e bi-variados usando o SEstatNet.
+  \end{smallitem} \\
 
-    Out/2013 & \textbf{Participante:} SECCOM {\small (Semana Acadêmica de
-        Ciência da Computação e Sistemas de Informação)}
-    \begin{smallitem}
-        \item Organizado por PET Computação (10h)
-        \item Palestras sobre temas diversos relacionados aos cursos.
-    \end{smallitem}
+  Out/2013 & \textbf{Participante}: SECCOM {\small (Semana Acadêmica de
+    Ciência da Computação e Sistemas de Informação)}
+  \begin{smallitem}
+    \item Organizado por PET Computação (10h)
+    \item Palestras sobre temas diversos relacionados aos cursos.
+  \end{smallitem}
 \end{contenttable}
 
 \begin{contenttable}{Qualificações}
-    Programação & \textbf{Nível intermediário}:
-    \begin{smallitem}
-        \item \verb!bash!, C, C\verb!++!, Google Sheets (fórmulas e
-        JavaScript), Java, \LaTeX
-        \item Python: \href{https://github.com/burnash/gspread}{gspread},
-        \href{http://matplotlib.org/}{matplotlib},
-        \href{http://www.numpy.org/}{NumPy},
-        \href{http://docs.python-requests.org/en/latest/#}{Requests},
-        \href{https://github.com/jmcarp/robobrowser}{RoboBrowser},
-        \href{http://www.scipy.org/}{SciPy},
-        \href{http://scrapy.org/}{Scrapy}
-    \end{smallitem} \\
+  Programação & \textbf{Nível intermediário}:
+  \begin{smallitem}
+    \item \verb!bash!, C, C\verb!++!, Google Sheets (fórmulas e JavaScript),
+      Java, \LaTeX{}
+    \item Python: \href{https://github.com/burnash/gspread}{gspread},
+      \href{http://matplotlib.org/}{matplotlib},
+      \href{http://www.numpy.org/}{NumPy},
+      \href{http://docs.python-requests.org/en/latest/#}{Requests},
+      \href{https://github.com/jmcarp/robobrowser}{RoboBrowser},
+      \href{http://www.scipy.org/}{SciPy},
+      \href{http://scrapy.org/}{Scrapy}
+  \end{smallitem} \\
 
-    & \textbf{Nível básico}:
-    \begin{smallitem}
-        \item AWK, \verb!bc!, Haskell, Julia, Pascal, Prolog, \verb!sed!
-    \end{smallitem} \\
+  & \textbf{Nível básico}:
+  \begin{smallitem}
+    \item AWK, \verb!bc!, Haskell, Julia, Pascal, Prolog, \verb!sed!
+  \end{smallitem} \\
 
-    Línguas & \textbf{Português (Brasil)} -- língua nativa \\
-    & \textbf{Inglês} -- Proficiência operacional
-    \begin{smallitem}
-        \item CEFR B2 em \textit{listening comprehension}
-        \item CEFR C1 em \textit{structure and written expression}
-        \item CEFR C1 em \textit{reading comprehension}
-    \end{smallitem}
+  Línguas & \textbf{Português (Brasil)} --- língua nativa \\
+  & \textbf{Inglês} --- Proficiência operacional
+  \begin{smallitem}
+    \item CEFR B2 em \textit{listening comprehension}
+    \item CEFR C1 em \textit{structure and written expression}
+    \item CEFR C1 em \textit{reading comprehension}
+  \end{smallitem}
 \end{contenttable}
 
 \end{document}
