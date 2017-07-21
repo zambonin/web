@@ -59,13 +59,16 @@ Atividades extracurriculares
 
 Qualificações
 
-Programação | Nível intermediário:
-            |  * bash, C, C++, Google Sheets (fórmulas e JavaScript), Java,
-            |    LaTeX
-            |  * Python: gspread, matplotlib, NumPy, Requests, RoboBrowser,
-            |    SciPy, Scrapy
-            | Nível básico:
-            |  * AWK, bc, Haskell, Julia, Pascal, Prolog, sed
+Tecnologias | Experiência de 3+ anos com C, C++, Java, LaTeX, Python
+            |  * Python: gspread, matplotlib, NumPy, PyQt, Requests,
+            |    RoboBrowser, Scrapy
+            |  * Contato breve com Haskell, JavaScript, Julia, Pascal, Prolog
+            |
+            | Caixa de ferramentas
+            |  * 4+ anos com GNU/Linux (bash, coreutils, util-linux,
+            |    awk, make, sed etc.)
+            |  * GDB, Git, Google Sheets, Google Apps Script, QEMU,
+            |    Vim, Valgrind
             |
     Línguas | Português (Brasil) – língua nativa
             | Inglês – Proficiência operacional
