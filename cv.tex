@@ -1,140 +1,155 @@
-% loosely based on: http://texblog.org/2012/04/25/writing-a-cv-in-latex/
-
 \documentclass{article}
 
-\usepackage[brazil]{babel}
+\usepackage[english]{babel}
 \usepackage[a4paper, margin=1cm]{geometry}
-\usepackage[colorlinks, urlcolor={blue!70!black}]{hyperref}
 \usepackage[utf8]{inputenc}
-\usepackage{array, xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks, urlcolor={gray!75!black}]{hyperref}
+\usepackage{amssymb, array, cmbright, parskip, qrcode, xcolor}
 
 \newenvironment{contenttable}[1]
   {\section*{#1}
-   \newcolumntype{L}{>{\bf \raggedleft}p{0.13\textwidth}}
+   \newcolumntype{L}{>{\bf \raggedleft}p{0.1\textwidth}}
    \newcolumntype{R}{p{0.82\textwidth}}
    \begin{tabular}{L!{\color{lightgray} \vrule}R}}
   {\end{tabular}}
 
-\newenvironment{smallitem}
-  {\vspace{-2mm}\itemize%
-   \setlength{\parskip}{0pt}
-   \setlength{\itemsep}{2pt}}
-  {\vspace{-2mm}\enditemize}
+\newcommand{\csep}{$\;\cdot\;$}
+\newcommand{\lattesurl}{lattes.cnpq.br/8192345791741876}
+\newcommand{\bscurl}{https://repositorio.ufsc.br/handle/123456789/187875}
+\newcommand{\doi}{10.1109/ISCC.2018.8538642}
 
+\def\labelitemi{$\blacktriangleright$}
 
 \pagenumbering{gobble}
 
 \begin{document}
 
-\begin{tabular}{@{\hspace{-5mm}}l}
-  {\Large \textbf{Gustavo Zambonin}}    \\
-  Av. Francisco Roberto da Silva, 925   \\
-  Biguaçu/SC (88160--284)
+\begin{tabular}{@{\hspace{0mm}}l}
+  {\Large \textbf{Gustavo Zambonin}} \\
+  \href{mailto:gustavo.zambonin@posgrad.ufsc.br}{gustavo.zambonin@posgrad.ufsc.br}
+      \csep{} +55 48 999 973 940
+      \csep{} \href{https://github.com/zambonin}{github.com/zambonin} \\
+  925 Francisco Roberto da Silva Av. \csep{} 88160-284
+      \csep{} Biguaçu, Santa Catarina \csep{} Brazil
 \end{tabular}
-\hfill
-\begin{tabular}{r}
-  \verb!+!55 (48) 99997 3940            \\
-  \verb!gustavo.zambonin@grad.ufsc.br!  \\
-  \url{https://github.com/zambonin}
-\end{tabular}
+\hfill \qrcode[height=1.35cm]{https://keybase.io/zambonin}
 
-\begin{contenttable}{Formação acadêmica}
-  2013 --- atualmente & \textbf{Bacharelado em Ciência da Computação}
-  \begin{smallitem}
-    \item Universidade Federal de Santa Catarina, Florianópolis/SC
-    \item Previsão para conclusão: 2018
-    \item \url{http://lattes.cnpq.br/8192345791741876}
-  \end{smallitem}
+\begin{contenttable}{Education
+    {\normalsize\normalfont (\href{http://\lattesurl}{\lattesurl})}}
+  Today \\ Aug/2018 & \textbf{M.Sc. in Computer Science} (PPGCC/UFSC)
+  \begin{itemize}
+    \item Post-quantum cryptography researcher, in particular digital signature
+        schemes
+    \begin{itemize}
+      \item Multivariate cryptography with focus on the Rainbow family
+    \end{itemize}
+    \item Teaching assistant for Mathematical Foundations of Informatics
+    \begin{itemize}
+      \item Order theory, lattice theory, algebraic structures, group theory
+    \end{itemize}
+  \end{itemize} \\
+
+  Jul/2018 \\ Mar/2013 & \textbf{B.Sc. in Computer Science} (UFSC)
+  \begin{itemize}
+    \item Thesis named "\href{\bscurl}{Performance optimization for the
+        Winternitz digital signature scheme}"
+    \begin{itemize}
+      \item Tuning the Winternitz hash-based digital signature scheme
+          (\href{https://doi.org/\doi}{\doi})
+    \end{itemize}
+    \item Tutor for Probability and Statistics and Introduction to Computer
+        Science
+    \begin{itemize}
+      \item Discrete and continuous probability distributions and their
+          applications
+      \item Building blocks of programming languages and GNU/Linux operating
+          systems
+    \end{itemize}
+    \vspace{-5mm}
+  \end{itemize}
 \end{contenttable}
 
-\begin{contenttable}{Experiência profissional}
-  Mar/2015 --- Ago/2015 & \textbf{Monitoria}
-    (Introdução à Ciência da Computação --- voluntário)
-  \begin{smallitem}
-    \item Implementação de algoritmos em linguagens de programação (C,
-      Java, Pascal, Python), estruturas de seleção e repetição, declaração e
-      indexação de variáveis, compilação e execução de programas, entrada e
-      saída de dados.
-    \item Ementa similar a Computação Científica I, Introdução à
-      Computação, Programação Orientada a Objetos I e Introdução à
-      Programação Orientada a Objetos.
-  \end{smallitem} \\
-
-  Jul/2014 --- Ago/2015 & \textbf{Monitoria} (Probabilidade e Estatística)
-  \begin{smallitem}
-    \item Análise exploratória de dados, cálculo de probabilidades de
-      eventos, variáveis aleatórias discretas e contínuas, distribuições
-      amostrais e estimação de parâmetros.
-  \end{smallitem}
+\begin{contenttable}{Professional experience}
+  Today \\ May/2016 & \textbf{Computer Security Laboratory}
+    (LabSEC/UFSC)
+  \begin{itemize}
+    \item Senior developer of the
+        \href{https://verificador.iti.gov.br}{Conformance Verifier} for digital
+          signatures in the Brazilian PKI
+    \begin{itemize}
+    \item Implementation of CMS and PDF signatures verification, and creation
+        of a generic heuristic to classify digital signatures. Migration of
+            the code base from Ant to Maven, unifying the package generation
+            for Windows, macOS and Debian, and production of WAR files.
+            Creation of the Web Verifier, developing Java servlets from
+            scratch, with focus on maintainable code and ease of use.
+            Employment of continuous integration and deployment practices using
+            Docker, automating unit testing and package builds. Establishment
+            of a validation environment updated frequently, using Apache HTTP
+            Server and Tomcat. Migration of the code base history from
+            Subversion to Git. Supervision of general development progress for
+            CAdES, XAdES and PAdES signature verification.  Administration of
+            all related virtual infrastructure.
+    \end{itemize}
+    \item Researcher of software requirements needed to support digital
+        signatures in certain applications
+    \begin{itemize}
+      \item Description of a library model used to configure and instantiate a
+          public-key infrastructure, with the intent of testing targeted
+            software. Generated artifacts include multi-level certificate
+            authorities, user certificates, certificate revocation lists and
+            OCSP responses.
+      \item Analysis of the effort needed to add digital signatures support on
+          PDF.js, with the intent of enabling verification directly inside the
+            browser. Creation of fork that verifies a small set of digital
+            signatures. Description of a software model that allows
+            modularization and decoupling of the digital signature verification
+            component from PDF.js.
+    \end{itemize}
+    \item Various roles in other projects related to information security
+    \begin{itemize}
+      \item Researcher of a protocol to quantum-proof a blockchain, with
+          secure substitution of wallets, replacement of cryptographic
+            algorithms and zero downtime for the platform.
+      \item Operator of security ceremonies, in which secure servers were
+          provisioned to run verifiable online elections through Helios, itself
+            based on frameworks such as Celery and Django.
+      \item Forensic computer examiner of images generated by speed enforcement
+          cameras, handling large amounts of heterogeneous data with tools such
+            as \texttt{coreutils}, with the intent of proving accuracy and
+            integrity of such files.
+    \end{itemize}
+    \vspace{-5mm}
+  \end{itemize}
 \end{contenttable}
 
-\begin{contenttable}{Atividades extracurriculares}
-  Jul/2016 & \textbf{Participante}: \emph{Workshop in Combinatorics and
-    Finite Fields in Cryptography and Codes}
-  \begin{smallitem}
-    \item Organizado por LabSEC/UFSC (16h) ---
-      \url{http://cffcc.labsec.ufsc.br/}
-    \item Tópicos abordados: criptografia, segurança, criptografia
-      combinatorial, corpos finitos, design combinatorial, teoria
-      de códigos, e áreas relacionadas.
-  \end{smallitem} \\
+\begin{contenttable}{Qualifications}
+  Coding & AWK, Bash, C, C++, Java (JSE, JEE), \LaTeX{}, sed
 
-  Abr/2015 & \textbf{Participante}: Minicurso de Linux (auxílio voluntário)
-  \begin{smallitem}
-    \item Organizado por PET Computação (6h) ---
-      \url{http://pet.inf.ufsc.br/seccom/}
-    \item Introdução ao funcionamento de sistemas operacionais do tipo
-      GNU/Linux e suas diferenças, comandos básicos e gerenciamento de
-      arquivos, redirecionamento de entrada e saída de comandos, segurança
-      do sistema de arquivos, processos e programas em execução.
-  \end{smallitem} \\
+           Python (Flask, gspread, Helios, IPython, Matplotlib, NumPy, PyQt,
+           Requests, robobrowser, Scrapy)
+  \begin{itemize}
+    \item Brief experience: CSS, gnuplot, Haskell, JavaScript, Julia, Octave,
+        Pascal, Prolog, SageMath
+    \vspace{-4mm}
+  \end{itemize} \\
 
-  Out/2014 & \textbf{Ministrante}: A análise de dados usando o SEstatNet
-  \begin{smallitem}
-    \item Sistema de Ensino-Aprendizagem de Estatística via web ---
-      \url{http://sestatnet.ufsc.br/}
-    \item 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h)
-    \item Tópicos abordados: A filosofia da descrição e exploração de
-      dados. Apresentação do SEstatNet. Descrição e exploração de dados uni-
-      e bi-variados usando o SEstatNet.
-  \end{smallitem} \\
+  Environs & GNU/Linux, Vim, IntelliJ Idea, PyCharm, Eclipse, Visual Studio
+    Code
+  \begin{itemize}
+    \item Management: Ant, Git, GitLab CI/CD, Make, Maven, Subversion
+    \vspace{-4mm}
+  \end{itemize} \\
 
-  Out/2013 & \textbf{Participante}: SECCOM {\small (Semana Acadêmica de
-    Ciência da Computação e Sistemas de Informação)}
-  \begin{smallitem}
-    \item Organizado por PET Computação (10h)
-    \item Palestras sobre temas diversos relacionados aos cursos.
-  \end{smallitem}
-\end{contenttable}
+  Software & Clang Static Analyzer, Docker, GDB, QEMU, PostgreSQL, SQLite,
+    Valgrind
+  \begin{itemize}
+    \item Middleware: Apache HTTP Server, Archiva, Tomcat, WildFly
+    \vspace{-4mm}
+  \end{itemize} \\
 
-\begin{contenttable}{Qualificações}
-  Tecnologias & \textbf{Experiência de 3+ anos com C, C++, Java,
-    \LaTeX{}, Python}
-  \begin{smallitem}
-    \item Python: \href{https://github.com/burnash/gspread}{gspread},
-      \href{http://matplotlib.org/}{matplotlib},
-      \href{http://www.numpy.org/}{NumPy},
-      \href{http://pyqt.sourceforge.net/Docs/PyQt5/}{PyQt},
-      \href{http://docs.python-requests.org/}{Requests},
-      \href{https://github.com/jmcarp/robobrowser}{RoboBrowser},
-      \href{http://scrapy.org/}{Scrapy}
-    \item Contato breve com Haskell, JavaScript, Julia, Pascal, Prolog
-  \end{smallitem} \\
-
-  & \textbf{Caixa de ferramentas}
-  \begin{smallitem}
-    \item 4+ anos com GNU/Linux (\texttt{bash}, \texttt{coreutils},
-      \texttt{util-linux}, \texttt{awk}, \texttt{make}, \texttt{sed} etc.)
-    \item GDB, Git, Google Sheets, Google Apps Script, QEMU, Vim, Valgrind
-  \end{smallitem} \\
-
-  Línguas & \textbf{Português (Brasil)} --- língua nativa \\
-  & \textbf{Inglês} --- Proficiência operacional
-  \begin{smallitem}
-    \item CEFR B2 em \textit{listening comprehension}
-    \item CEFR C1 em \textit{structure and written expression}
-    \item CEFR C1 em \textit{reading comprehension}
-  \end{smallitem}
+  Languages & Portuguese (native), English (fluent), French (beginner)
 \end{contenttable}
 
 \end{document}

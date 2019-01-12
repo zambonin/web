@@ -1,77 +1,34 @@
-Gustavo Zambonin                                            +55 (48) 99997 3940
-Av. Francisco Roberto da Silva, 925               gustavo.zambonin@grad.ufsc.br
-Biguaçu/SC (88160-284)                              https://github.com/zambonin
+Gustavo Zambonin
+gustavo.zambonin@posgrad.ufsc.br   · +55 48 999 973 940 · github.com/zambonin
+925 Francisco Roberto da Silva Av. · 88160-284          · Biguaçu, SC, Brazil
 
-Formação acadêmica
+Education (lattes.cnpq.br/8192345791741876)
 
-     2013 – | Bacharelado em Ciência da Computação
- atualmente |  * Universidade Federal de Santa Catarina, Florianópolis/SC
-            |  * Previsão para conclusão: 2018
-            |  * http://lattes.cnpq.br/8192345791741876
+      Today    M.Sc. in Computer Science (PPGCC/UFSC)
+   Aug/2018      >  Post-quantum cryptography researcher, in particular digital
+                    signature schemes
+                 >  Teaching assistant for Mathematical Foundations of
+                    Informatics
 
-Experiência profissional
+   Jul/2018    B.Sc. in Computer Science (UFSC)
+   Mar/2013      >  Thesis named "Performance optimization for the Winternitz
+                    digital signature scheme"
+                 >  Tutor for Probability and Statistics and Introduction to
+                    Computer Science
 
- Mar/2015 – | Monitoria (Introdução à Ciência da Computação – voluntário)
- Ago/2015   |  * Implementação de algoritmos em linguagens de programação (C,
-            |    Java, Pascal, Python), estruturas de seleção e repetição,
-            |    declaração e indexação de variáveis, compilação e execução de
-            |    programas, entrada e saída de dados.
-            |  * Ementa similar a Computação Científica I, Introdução à
-            |    Computação, Programação Orientada a Objetos I e Introdução à
-            |    Programação Orientada a Objetos.
-            |
- Jul/2014 – | Monitoria (Probabilidade e Estatística)
- Ago/2015   |  * Análise exploratória de dados, cálculo de probabilidades de
-            |    eventos, variáveis aleatórias discretas e contínuas,
-            |    distribuições amostrais e estimação de parâmetros.
+Professional experience
 
-Atividades extracurriculares
+      Today    Computer Security Laboratory (LabSEC/UFSC)
+   May/2016      >  Senior developer of the Conformance Verifier for digital
+                    signatures in the Brazilian PKI
+                 >  Researcher of software requirements needed to support
+                    digital signatures in certain applications
+                 >  Various roles in other projects related to information
+                    security
 
-   Jul/2016 | Participante: Workshop in Combinatorics and Finite Fields in
-            | Cryptography and Codes
-            |  * Organizado por LabSEC/UFSC (16h)
-            |  * http://cffcc.labsec.ufsc.br/
-            |  * Tópicos abordados: criptografia, segurança, criptografia
-            |    combinatorial, corpos finitos, design combinatorial, teoria
-            |    de códigos, e áreas relacionadas.
-            |
-   Abr/2015 | Participante: Minicurso de Linux (auxílio voluntário)
-            |  * Organizado por PET Computação (6h)
-            |  * http://pet.inf.ufsc.br/seccom/
-            |  * Introdução ao funcionamento de sistemas operacionais do tipo
-            |    GNU/Linux e suas diferenças, comandos básicos e gerenciamento
-            |    de arquivos, redirecionamento de entrada e saída de comandos,
-            |    segurança do sistema de arquivos, processos e programas em
-            |    execução.
-            |
-   Out/2014 | Ministrante: A análise de dados usando o SEstatNet (Sistema de
-            | Ensino-Aprendizagem de Estatística via web)
-            |  * 13ª SEPEX – Semana de Ensino, Pesquisa e Extensão da UFSC (4h)
-            |  * http://sestatnet.ufsc.br/
-            |  * Tópicos abordados: A filosofia da descrição e exploração de
-            |    dados. Apresentação do SEstatNet. Descrição e exploração de
-            |    dados uni- e bi-variados usando o SEstatNet.
-            |
-   Out/2013 | Participante: SECCOM (Semana Acadêmica de Ciência da Computação
-            | e Sistemas de Informação)
-            |  * Organizado por PET Computação (10h)
-            |  * Palestras sobre temas diversos relacionados aos cursos.
+Qualifications
 
-Qualificações
-
-Tecnologias | Experiência de 3+ anos com C, C++, Java, LaTeX, Python
-            |  * Python: gspread, matplotlib, NumPy, PyQt, Requests,
-            |    RoboBrowser, Scrapy
-            |  * Contato breve com Haskell, JavaScript, Julia, Pascal, Prolog
-            |
-            | Caixa de ferramentas
-            |  * 4+ anos com GNU/Linux (bash, coreutils, util-linux,
-            |    awk, make, sed etc.)
-            |  * GDB, Git, Google Sheets, Google Apps Script, QEMU,
-            |    Vim, Valgrind
-            |
-    Línguas | Português (Brasil) – língua nativa
-            | Inglês – Proficiência operacional
-            |  * CEFR B2 em listening comprehension
-            |  * CEFR C1 em structure and written expression
-            |  * CEFR C1 em reading comprehension
+     Coding    AWK, Bash, C, C++, Java (JSE, JEE), LaTeX, Python, sed
+   Environs    GNU/Linux, Vim, IntelliJ Idea, PyCharm, Eclipse, VSCode
+   Software    Clang Tools, Docker, GDB, QEMU, PostgreSQL, SQLite, Valgrind
+  Languages    Portuguese (native), English (fluent), French (beginner)
