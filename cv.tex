@@ -5,7 +5,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[colorlinks, urlcolor={gray!75!black}]{hyperref}
-\usepackage{amssymb, array, cmbright, parskip, qrcode, xcolor}
+\usepackage[datesep={}]{datetime2}
+\usepackage{amssymb, array, cmbright, parskip, xcolor}
 
 \newenvironment{contenttable}[1]
   {\section*{#1}
@@ -33,7 +34,7 @@
   925 Francisco Roberto da Silva Av. \csep{} 88160-284
       \csep{} Biguaçu, Santa Catarina \csep{} Brazil
 \end{tabular}
-\hfill \qrcode[height=1.35cm]{https://keybase.io/zambonin}
+\hfill rev. \DTMdate{2019-01-12}
 
 \begin{contenttable}{Education
     {\normalsize\normalfont (\href{http://\lattesurl}{\lattesurl})}}
