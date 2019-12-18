@@ -7,3 +7,4 @@ all: $(SRC_FILES:.tex=.pdf)
 
 clean:
 	latexmk -cd -C $(SRC_FILES)
+	$(RM) *.bbl
