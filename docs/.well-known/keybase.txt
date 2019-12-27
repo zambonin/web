@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/zambonin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://zambonin.org
+  * I am zambonin (https://keybase.io/zambonin) on keybase.
+  * I have a public key with fingerprint A59B 980F 2F7A ABE1 4473  496E F69C A23B 5EF4 8040
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101a9f29ee1f29a7934a301d09ee2ad498b02e797a2ac641a22e92d61a07ba3d97e0a",
+      "fingerprint": "a59b980f2f7aabe14473496ef69ca23b5ef48040",
+      "host": "keybase.io",
+      "key_id": "f69ca23b5ef48040",
+      "kid": "0101a9f29ee1f29a7934a301d09ee2ad498b02e797a2ac641a22e92d61a07ba3d97e0a",
+      "uid": "4dfe5a46dec1f41e285f8f3fcf1d3919",
+      "username": "zambonin"
+    },
+    "merkle_root": {
+      "ctime": 1577409821,
+      "hash_meta": "de9c3e5f01ee546ba887e3ed3ec097f23e233d84b56a83faf22e4a601a6b2e84",
+      "seqno": 13968697
+    },
+    "revoke": {
+      "sig_ids": [
+        "720a3ae0e8456344e07ba796d676a62e315c91a3125b3e5c827afe1e3e91e57e0f"
+      ]
+    },
+    "service": {
+      "hostname": "zambonin.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1577409820,
+  "expire_in": 157680000,
+  "prev": "281b78dde3e4d6bcadc3633e774025de4b22c616d89e1a94f87ae83de463f64e",
+  "seqno": 30,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMK5AnicrVNdaB1FGL2JRm2wYgptSSxUtyI2xrrzszM7MdCmRYq2FPGvmHhzO7vz
+zc32Jrs3u5t7TcsVi1CMD/Gh9EFQi8X+oGKbajW1FCTo7UMrWoMPRrTaohBLKMJF
+0T7o7EURio/uwy7zzTnnO9/ZmU+W3pBrb/n11YMPDjWe39BybrY6nhtqy6/abXmR
+mrB6d1slaH5gREGSFkqBsnotG9lICo0FADJvyQWhkthI2aaCpaLC9WwMXHCJpc8o
+khiDwIohaXNPEiU42NLqsXQQFiEux0GYGlnpCE+4tsaaS+kBopQTKhhoJnyJieeA
+pq5NbUMcjpKMYcx5MoF1QWRqZlFo2vsP/P/se7wpR5UGR1KmwEeaIsCuo11NtK+R
+IgKJDJhAHMpRMOhdctSLwiC0aj3WKMSlESjEUZRm4fppkEGQwzm1hYuRGVAmw4VR
+SKVhKhA+AUfbCMChzJOuy4GAIuDbgmtMABOiXOo5TLpES21cU8nMrMzD4FLjI4Gx
+MDIdiGAuE9xYiKESlSDrngRFk1ti9Q5aHNuSSLANyWGEUsjG5oIpxplkGAhyfIEk
+QdjxjCPfxVxqQMaMQOCYcLSVr2Xd4krgN8WzH3VdAOuiuGgsleMojfxoxOwMp2k5
+6c2CSSfKGbQKXuFvkYIXhMocE8OoQJwEUWjGMMjrM7N7LHi2HMRQCMJmmbm2ebI+
+UDGS2EUed5UyXqlini+VTxghkNGxo4B6GPsMMeUKMIeEapdLcInZYEQzCv+GSIxo
+KotG0yQXynQ8Bqs2+/EzN+Za2nM3tbVm9yfXvuT2f27VwNwtuQsXrtTb9m28HB77
+5ZtTL3y5pftetPTnxtTs6v6zc9OTA14j/1n3/Jr3Xzu/4cjX05dXnvkWPh1atuLA
+/fecsDvOdq1pqZTumhs7fvjRhR+qp7+aVos/Prx5Yzz28vf1A8V3Tn5+aX3/rY2P
+7nvo8BcjZ94+5Of37+laW+0rLfzZPfnk3qnH+pzX678PXFzLH7gIr1w7evMd26P5
+2v4dq/uT6c5TV04sTu1c3/5e2jd/9MP6yPFq685z165umviga0fuiZOVl5bv3bpl
+snHnZvlcx9iRmYWnF8ub+OCbM3u2vXts+7J9b72R/2liq1r+yLanvuvoPH132/mZ
+PzoXHn9xSeuqS7+tWHn1tvpgrWvXQecvnWGCkg==
+=1C6B
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zambonin
+
+==================================================================
