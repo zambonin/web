@@ -16,36 +16,36 @@ a:hover {
   color: #004282;
 }
 
-.container > p {
+.c > p {
   text-align: justify;
 }
 
-.container {
+.c {
   margin: 0 auto;
   padding: 8px;
   width: 768px;
 }
 
-.container h3 {
+.c h3 {
   line-height: 10pt;
 }
 
-.container span {
+.c span {
   text-decoration: underline;
   text-decoration-style: dotted;
 }
 
-.container li {
+.c li {
   list-style-type: square;
   padding-bottom: 4px;
 }
 
-.site-avatar {
+.sa {
   float: left;
   width: 128px;
 }
 
-.site-avatar img {
+.sa img {
   border: #dfdfdf;
   border-radius: 5px;
   border-width: 1px;
@@ -53,20 +53,20 @@ a:hover {
   width: inherit;
 }
 
-.site-info {
+.si {
   float: left;
   margin-left: 32px;
   margin-right: 32px;
 }
 
-.site-name {
+.sn {
   margin: 0;
   color: #333;
   font-weight: 512;
   font-size: 32px;
 }
 
-.site-description {
+.sd {
   margin: 0;
   font-size: 16px;
   width: 448px;
@@ -74,25 +74,26 @@ a:hover {
   text-align: justify;
 }
 
-.site-links {
-  padding-top: 8px;
+.sl {
+  padding: 8px 0 8px 0;
   float: left;
   text-align: center;
   color: #666;
   line-height: 128%;
   width: 128px;
+  height: 128px;
 }
 
-.site-links p {
+.sl p {
   margin: 0 0 8px;
   font-size: 16px;
 }
 
-.site-links a {
+.sl a {
   text-decoration: none;
 }
 
-.foot {
+.f {
   font-size: 12px;
   text-align: center;
   color: #666;
@@ -103,15 +104,15 @@ a:hover {
     padding-left: 20px;
   }
 
-  .container, .container > p, .site-description {
+  .c, .c > p, .sd {
     width: 98%;
   }
 
-  .site-info {
+  .si {
     margin: 0 0 8px;
   }
 
-  .site-avatar, .site-links {
+  .sa, .sl {
     display: none;
   }
 }
