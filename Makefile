@@ -1,12 +1,10 @@
 SRC_FILES = $(wildcard *.tex)
-OUTPUT_DIR = docs
 
 all: $(SRC_FILES:.tex=.pdf)
 
 %.pdf: %.tex
-	latexmk -outdir=$(OUTPUT_DIR) -interaction=nonstopmode \
-		-shell-escape -pdf -use-make -cd $<
+	latexmk -interaction=nonstopmode -shell-escape -pdf -use-make -cd $<
 
 clean:
-	latexmk -outdir=$(OUTPUT_DIR) -cd -C $(SRC_FILES)
-	$(RM) $(OUTPUT_DIR)/*.bbl
+	latexmk -cd -C $(SRC_FILES)
+	$(RM) *.bbl

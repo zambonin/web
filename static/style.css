@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: sans-serif;
   background: whitesmoke;
 }
 
@@ -14,10 +14,6 @@ a:visited {
 
 a:hover {
   color: #004282;
-}
-
-.c > p {
-  text-align: justify;
 }
 
 .c {
@@ -41,8 +37,12 @@ a:hover {
 }
 
 .sa {
-  float: left;
+  float: right;
   width: 128px;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0;
+  margin-top: 8px;
 }
 
 .sa img {
@@ -51,12 +51,6 @@ a:hover {
   border-width: 1px;
   border-style: solid;
   width: inherit;
-}
-
-.si {
-  float: left;
-  margin-left: 32px;
-  margin-right: 32px;
 }
 
 .sn {
@@ -69,9 +63,9 @@ a:hover {
 .sd {
   margin: 0;
   font-size: 16px;
-  width: 448px;
   padding-top: 8px;
   text-align: justify;
+  width: 620px;
 }
 
 .sl {
