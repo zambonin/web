@@ -1,112 +1,21 @@
-body {
-  font-family: sans-serif;
-  background: whitesmoke;
-}
-
-a:link {
-  text-decoration: none;
-  color: dodgerblue;
-}
-
-a:visited {
-  color: dodgerblue;
-}
-
-a:hover {
-  color: #004282;
-}
-
-.c {
-  margin: 0 auto;
-  padding: 8px;
-  width: 768px;
-}
-
-.c h3 {
-  line-height: 10pt;
-}
-
-.c span {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-}
-
-.c li {
-  list-style-type: square;
-  padding-bottom: 6px;
-}
-
-.sa {
-  float: right;
-  width: 128px;
-  text-align: center;
-  line-height: 1.5em;
-  margin: 0;
-  margin-top: 8px;
-}
-
-.sa img {
-  border: #dfdfdf;
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  width: inherit;
-}
-
-.sn {
-  margin: 0;
-  color: #333;
-  font-weight: 512;
-  font-size: 32px;
-}
-
-.sd {
-  margin: 0;
-  font-size: 16px;
-  padding-top: 8px;
-  text-align: justify;
-  width: 620px;
-}
-
-.sl {
-  padding: 8px 0 8px 0;
-  float: left;
-  text-align: center;
-  color: #666;
-  line-height: 128%;
-  width: 128px;
-  height: 128px;
-}
-
-.sl p {
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-
-.sl a {
-  text-decoration: none;
-}
-
-.f {
-  font-size: 12px;
-  text-align: center;
-  color: #666;
-}
-
+:root { --rgb: 0, 82, 164; }
+body { background:whitesmoke; font-family:sans; font-size:14.5px; }
+a:link, a:visited { text-decoration:none; color:rgba(var(--rgb), 1.0); }
+a:hover { color:rgba(var(--rgb), 0.8); }
+.h { display: flex; }
+.c { padding:8px; margin:0 auto; width:768px; }
+.c h3 { line-height:10pt; }
+.c span { text-decoration:underline; text-decoration-style:dotted; }
+.c li { list-style-type:square; padding-bottom:8px; }
+.sa { display:flex; align-items:center; }
+.sa img { border-radius:5px; }
+.si { margin:0 16px 0 0; }
+.sn { margin:0; }
+.sd { margin:8px 0 0 0; }
+.f { font-size:12px; text-align:center; color:#666; }
 @media (max-width:784px) {
-  ul {
-    padding-left: 20px;
-  }
-
-  .c, .c > p, .sd {
-    width: 98%;
-  }
-
-  .si {
-    margin: 0 0 8px;
-  }
-
-  .sa, .sl {
-    display: none;
-  }
+ ul { padding-left:20px; }
+ .c, .c>p, .sd { width:98%; }
+ .si { margin:0 0 8px; }
+ .sa { display:none; }
 }
