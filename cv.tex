@@ -1,14 +1,16 @@
 \documentclass[12pt]{article}
 
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{bibentry}
 \usepackage[english]{babel}
 \usepackage[a4paper, margin=1cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[colorlinks, citecolor=black, urlcolor={gray!75!black}]{hyperref}
 \usepackage[datesep={}]{datetime2}
-\usepackage{amssymb, array, cmbright, parskip, xcolor}
+\usepackage{amssymb, array, cmbright, enumitem, parskip, xcolor}
+\usepackage[
+    colorlinks, citecolor=black, urlcolor={gray!75!black}, plainpages=true
+]{hyperref}
 
 \newenvironment{sidetable}
   {\newcolumntype{L}{>{\bf \raggedright}p{0.14\textwidth}}
@@ -40,7 +42,7 @@
 \begin{tabular}{@{\hspace{0mm}}l}
   {\Large \textbf{Gustavo Zambonin}} {\tiny rev. \DTMtoday}
 \end{tabular}
-\hspace{5.15cm}\texttt{\href{https://zambonin.org}{zambonin.org}}
+\hfill \url{zambonin.org}
     \csep{} \texttt{\href{mailto:zambonin@pm.me}{zambonin@pm.me}}
 
 \begin{sidetable}
@@ -51,10 +53,9 @@
 \end{sidetable}
 
 \begin{sidetable}
-  Address   & Laboratório de Segurança em Computação (LabSEC) \\
-            & Departamento de Informática e Estatística, 218 \\
-            & Universidade Federal de Santa Catarina (UFSC) \\
-            & Florianópolis, Santa Catarina, 88040-900, Brasil
+  Address & Laboratório de Segurança em Computação (LabSEC), INE 218, \\
+          & Universidade Federal de Santa Catarina (UFSC), Florianópolis,
+            88040-900, Brasil
 \end{sidetable}
 
 \begin{sidetable}
@@ -62,62 +63,54 @@
 \end{sidetable}
 
 \begin{contenttable}{Education}
-  \textit{M.Sc. in Computer Science} (PPGCC/UFSC)
+  \emph{M.Sc. in Computer Science} (UFSC)
   \begin{itemize}
     \item Thesis: Reduction of key sizes on Rainbow-like
         multivariate signature schemes (to be defended on Jul/2020)
   \end{itemize} & Aug/2018--Today \\
 
-  \textit{B.Sc. in Computer Science} (UFSC)
+  \emph{B.Sc. in Computer Science} (UFSC)
   \begin{itemize}
-    \item Thesis: \href{https://repositorio.ufsc.br/handle/123456789/187875}{
-        Performance optimization for the Winternitz signature scheme} (pt-BR)
-  \end{itemize} & Mar/2013--Jul/2018 \\[-6mm]
-\end{contenttable}
+    \item \bibentry{Zambonin:201806}
 
-\begin{contenttable}{Publications}
-  \hspace{0mm}\bibentry{Zambonin:inproc:2019:jul}
-    & \cite{Zambonin:inproc:2019:jul} \vspace{1.25cm} \\
-
-  \hspace{0mm}\bibentry{Perin:inproc:2018:jun}
-    & \cite{Perin:inproc:2018:jun} \\
+  \end{itemize} & Mar/2013--Jul/2018 \\
 \end{contenttable}
 
 \begin{contenttable}{Academic activities}
-  \textit{Visiting researcher} at Carleton University
+  \emph{Visiting researcher} at Carleton University (Ottawa, Canada)
   \begin{itemize}
     \item Recipient of a \href{http://archive.is/RHxm4}{Mitacs-CALAREO
         Globalink Research Award} to study the security of Rainbow-like
           signature schemes
   \end{itemize} & Mar/2020--May/2020 \\
 
-  \textit{Teaching assistance} for INE410134 - Post Quantum Cryptography and
+  \emph{Teaching assistance} for INE410134 - Post Quantum Cryptography and
     Computation
   \begin{itemize}
     \item Guest lecture and consultancy on multivariate cryptography to
         graduate students
   \end{itemize} & Aug/2019--Nov/2019 \\
 
-  \textit{Co-supervision of B.Sc. thesis}
+  \emph{Co-supervision} of B.Sc. thesis
   \begin{itemize}
-    \item \bibentry{Bittencourt:thesis:2019:dec}
+    \item \bibentry{Bittencourt:201911}
   \end{itemize} & Mar/2019--Dec/2019 \\
 
-  \textit{Teaching assistance} for INE5601 - Mathematical Foundations of
+  \emph{Teaching assistance} for INE5601 - Mathematical Foundations of
     Informatics
   \begin{itemize}
     \item Classes on order theory, lattice theory, algebraic structures and
         group theory
   \end{itemize} & Aug/2018--Dec/2018 \\
 
-  \textit{Lecturer} of ``Data analysis with
+  \emph{Lecturer} of ``Data analysis with
     \href{http://sestatnet.ufsc.br}{SEstatNet}'' on the 13th
     \href{https://sepex.ufsc.br/}{SEPEX} at UFSC
   \begin{itemize}
     \item Workshop on data analysis and processing with specialized tool
   \end{itemize} & Oct/2014 \\
 
-  \textit{Teaching assistance} (undergraduate) for INE5405 - Probability and
+  \emph{Teaching assistance} (undergraduate) for INE5405 - Probability and
     Statistics
   \begin{itemize}
     \item Consultancy on exploratory data analysis, probability distributions
@@ -125,8 +118,13 @@
   \end{itemize} & Aug/2014--Jul/2015 \\
 \end{contenttable}
 
+\begin{contenttable}{Publications}
+  \hspace{0mm}\bibentry{Zambonin:201907} \\
+  \bibentry{Perin:201806} \\
+\end{contenttable}
+
 \begin{contenttable}{Professional experience}
-  \textit{Senior software developer} and systems administrator at LabSEC
+  \emph{Senior software developer} and systems administrator at LabSEC
   \begin{itemize}
     \item In partnership with the Brazilian National Institute of Information
         Technology (ITI). Major development effort towards the
@@ -137,7 +135,7 @@
           unit testing and continuous deployment practices.
   \end{itemize} & Jan/2018--Today \\
 
-  \textit{Security ceremony agent} at LabSEC
+  \emph{Security ceremony agent} at LabSEC
   \begin{itemize}
     \item In partnership with public prosecutor's offices. Secure servers were
         provisioned to run online elections through the end-to-end verifiable
@@ -145,7 +143,7 @@
           interaction.
   \end{itemize} & Oct/2018--Apr/2019 \\
 
-  \textit{Researcher} of quantum-safe blockchain protocols at LabSEC
+  \emph{Researcher} of quantum-safe blockchain protocols at LabSEC
   \begin{itemize}
     \item In partnership with a novel blockchain platform. Co-developed a
         protocol to quantum-proof a blockchain, with secure substitution of
@@ -153,7 +151,7 @@
           for the platform.
   \end{itemize} & Sep/2018--Mar/2019 \\
 
-  \textit{Computer forensic examiner} at LabSEC
+  \emph{Computer forensic examiner} at LabSEC
   \begin{itemize}
     \item In partnership with an intelligent transportation systems company. A
         complex data set was processed with native GNU/Linux tools and
@@ -161,7 +159,7 @@
           taken by speed enforcement cameras.
   \end{itemize} & Sep/2017--Apr/2018 \\
 
-  \textit{Junior software developer} at LabSEC
+  \emph{Junior software developer} at LabSEC
   \begin{itemize}
     \item In partnership with a Brazilian digital security company. Developed a
         proof-of-concept signature validation module for PDF.js and a small
@@ -169,24 +167,24 @@
           public-key infrastructure.
   \end{itemize} & Nov/2016--Dec/2017 \\
 
-  \textit{Junior software developer} at LabSEC
+  \emph{Junior software developer} at LabSEC
   \begin{itemize}
     \item In partnership with the Brazilian National Institute of Information
         Technology (ITI). Implemented verification modules for CMS and PDF
           signatures in the official digital signature validation tool for the
           Brazilian Public-Key Infrastructure.
-  \end{itemize} & May/2016--Oct/2016 \\[-4mm]
+  \end{itemize} & May/2016--Oct/2016 \\
 \end{contenttable}
 
 \begin{contenttable}{Qualifications}
-  \textit{Programming languages} and frameworks
+  \emph{Programming languages} and frameworks
   \begin{itemize}
     \item Worked with several Python frameworks: Flask, gspread,
         Helios, IPython, Matplotlib, NumPy, PyQt, Requests, robobrowser,
           Scrapy. For 5+ years routinely used AWK, Bash, C, C++, gnuplot, Java
           (JSE, JEE), \LaTeX{}, Make, SageMath, sed.
   \end{itemize} \\
-  \textit{Software} and environment tools
+  \emph{Software} and environment tools
   \begin{itemize}
     \item GNU/Linux exclusive user for 4+ years, with the following skill set:
         (i) text editors and IDEs include Vim, IntelliJ Idea, PyCharm; (ii)
@@ -194,7 +192,7 @@
           (iii) middleware includes Apache HTTP Server, Archiva, Tomcat,
           WildFly; (iv) miscellaneous software includes Clang Tools, Docker,
           GDB, OpenSSL, QEMU, PostgreSQL, SQLite, Valgrind.
-  \end{itemize} \\[-4mm]
+  \end{itemize} \\
 \end{contenttable}
 
 \begin{contenttable}{Other interests}
@@ -202,7 +200,7 @@
     specifically older than the author and any song with a saxophone line. \\
 \end{contenttable}
 
-\bibliographystyle{plainnat}
+\bibliographystyle{abbrv}
 \nobibliography{\jobname}
 
 \end{document}
