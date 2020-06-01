@@ -4,9 +4,10 @@ a:link, a:visited { text-decoration:none; color:rgba(var(--rgb), 1.0); }
 a:hover { color:rgba(var(--rgb), 0.8); }
 .h { display: flex; }
 .c { padding:8px; margin:0 auto; width:768px; }
-.c h3 { line-height:10pt; }
-.c span { text-decoration:underline; text-decoration-style:dotted; }
-.c li { list-style-type:square; padding-bottom:8px; }
+.c h3 { margin:12px 0; }
+.c span { text-decoration:underline dotted; }
+.c ul { margin-top: 8px; padding-left:32px; }
+.c li { list-style:square; padding: 4px; }
 .sa { display:flex; align-items:center; }
 .sa img { border-radius:5px; }
 .si { margin:0 16px 0 0; }
