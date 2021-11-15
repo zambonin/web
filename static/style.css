@@ -13,6 +13,7 @@ a:hover { color:rgba(var(--rgb), 0.8); }
 .si { margin:0 16px 0 0; }
 .sn { margin:0; }
 .sd { margin:8px 0 0 0; }
+.sy { display: none; }
 .f { font-size:12px; text-align:center; color:#666; }
 @media (max-width:784px) {
  ul { padding-left:20px; }
