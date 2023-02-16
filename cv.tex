@@ -1,102 +1,141 @@
 \documentclass[12pt]{article}
 
 \usepackage[english]{babel}
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage[OT1]{fontenc}
 \usepackage[datesep={}]{datetime2}
-\usepackage[colorlinks, urlcolor={gray!75!black}, plainpages=true]{hyperref}
-\usepackage{array, cmbright, parskip, xcolor}
+\usepackage[colorlinks, urlcolor={blue!45!black}, plainpages=true]{hyperref}
+\usepackage[sfdefault]{quattrocento}
+\usepackage{array, multirow, parskip, xcolor}
 
-\newenvironment{sidetable}
+\newcommand*\ruleline[1]{%
+  \makebox[\linewidth]{#1{\color{blue!45!black}\hspace{1ex}\hrulefill}}}
+\newcommand*{\sep}{$\cdot\;$}
+\newcommand*{\headername}[2]{\ruleline{\textbf{\Large{#1}} {\scriptsize #2}}}
+
+\newenvironment{headertable}
   {\renewcommand{\arraystretch}{1.4}
    \newcolumntype{L}{>{\bf \raggedright}p{0.14\textwidth}}
    \newcolumntype{R}{p{0.82\textwidth}}
    \begin{tabular}{@{\hspace{0mm}}LR}}
   {\end{tabular}}
 
-\newenvironment{contenttable}[1]
-  {\subsection*{#1}
-   \renewcommand{\arraystretch}{1.4}
+\newcommand*{\headerrow}[2]{#1 & #2 \\}
+
+\newenvironment{contenttable}[2][1.4]
+  {\subsection*{\ruleline{#2}}
+   \renewcommand{\arraystretch}{#1}
    \newcolumntype{L}{p{0.82\textwidth}}
    \newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.14\textwidth}}
    \begin{tabular}{@{\hspace{0mm}}LR}}
   {\end{tabular}}
 
+\newcommand{\contentrow}[5]{
+  \emph{#1} #2 & \multirow[t]{2}{58pt}{#3--#4} \\
+  \small{#5} & \\
+}
+
 \pagenumbering{gobble}
 
 \begin{document}
 
-{\Large \textbf{Gustavo Zambonin}} {\tiny rev. \DTMtoday}
-\hfill \href{https://zambonin.org}{\texttt{zambonin.org}}
-    $\;\cdot\;$ \href{mailto:zambonin@pm.me}{\texttt{zambonin@pm.me}}
+\headername{Gustavo Zambonin}{rev. \DTMtoday}
 
-\begin{sidetable}
-  About     & Quantum-safe cryptography researcher focusing on digital
-              signature schemes, backed by years of contributions to the
-              Brazilian Public-Key Infrastructure standards and a diversified
-              set of projects related to information security. \\
+\begin{headertable}
+  \headerrow{About}{
+    I supervise research and development of the Brazilian Digital Signature
+    Standard, and act as a consultant to a breadth of projects related to
+    information security. I specialize in quantum-safe cryptography and
+    public-key infrastructures.
+  }
 
-  Address   & Laboratório de Segurança em Computação (LabSEC), INE 218,
-              Universidade Federal de Santa Catarina (UFSC), Florianópolis,
-              88040-900, Brazil \\
+  \headerrow{Address}{
+    \href{https://zambonin.org}{\texttt{zambonin.org}}
+    \sep \href{mailto:zambonin@pm.me}{\texttt{zambonin@pm.me}}
+  }
 
-  Languages & Portuguese (native), English (fluent), French (beginner)
-\end{sidetable}
-
-\begin{contenttable}{Education}
-  \emph{PhD student in Computer Science} at the University of Ottawa (currently
-    researching post-quantum cryptography and combinatorial cryptography)
-    & Sep/2020--Today \\
-
-  \emph{MSc in Computer Science} from the Universidade Federal de Santa
-    Catarina (thesis named
-    \href{https://repositorio.ufsc.br/handle/123456789/219497}{On the
-    randomness of Rainbow signatures})
-    & Aug/2018--Sep/2020 \\
-
-  \emph{BSc in Computer Science} from the Universidade Federal de Santa
-    Catarina (thesis named
-    \href{https://repositorio.ufsc.br/handle/123456789/187875}{Performance
-    optimization for the Winternitz signature scheme})
-    & Mar/2013--Jul/2018
-\end{contenttable}
-
-\begin{contenttable}{Academic activities}
-  \emph{Visiting researcher} at Carleton University (Canada) -- Recipient of
-    a \href{http://archive.is/RHxm4}{Mitacs-CALAREO Globalink Research Award}
-    to study the security of Rainbow-like signature schemes
-    & Mar/2020--Jun/2020 \\
-
-  \emph{Teaching assistant} for INE5601 - Mathematical Foundations of
-    Informatics at UFSC (Classes on order theory, lattice theory, algebraic
-    structures and group theory)
-    & Aug/2018--Dec/2018 \\
-
-  \emph{Teaching assistant} for INE5405 - Probability and Statistics at UFSC
-    (Consultancy on exploratory data analysis, probability distributions and
-    events)
-    & Aug/2014--Jul/2015
-\end{contenttable}
+  \headerrow{Languages}{
+    Portuguese (native), English (fluent), French (beginner)
+  }
+\end{headertable}
 
 \begin{contenttable}{Professional experience}
-  \emph{Senior developer and project manager} at LabSEC -- In partnership with
-    the Brazilian National Institute of Information Technology, coordinates the
-    development of desktop, web and mobile tools used in the Brazilian
-    Public-Key Infrastructure to generate and validate digital signatures.
-    & May/2016--Today \\
+  \contentrow
+    {Software project manager and researcher}
+    {
+      at the Computer Security Lab of the Universidade Federal de Santa
+      Catarina (UFSC)
+    }
+    {May/2016}
+    {Today}
+    {
+      I lead the team whose job is to improve, maintain and add features to the
+      Brazilian Digital Signature Standard official implementation, all derived
+      applications, and normative documents. As a result, we enable any
+      Brazilian citizen to generate and verify digitally signed files according
+      to the latest standards.
+    }
 
-    Has also worked as a (i) ceremony operator deploying Helios-based e-voting
-    platforms; (ii) quantum-safe blockchain researcher; (iii) computer forensic
-    examiner measuring the accuracy of pictures from speed enforcement cameras.
+  \contentrow
+    {Information security specialist}
+    {
+      in partnership with several institutions
+    }
+    {Sep/2017}
+    {Today}
+    {
+      I have also worked as a consultant on digital signature standards;
+      a ceremony operator deploying Helios-based e-voting platforms;
+      a quantum-safe blockchain researcher; and a computer forensic examiner
+      measuring the accuracy of pictures from speed enforcement cameras.
+    }
 \end{contenttable}
 
-\begin{contenttable}{Qualifications and other interests}
-  For 5+ years routinely uses AWK, Bash, C, C++, gnuplot, Java (JSE, JEE),
-    \LaTeX{}, Make, Python, SageMath, sed on a GNU/Linux distribution. \\
+\begin{contenttable}{Education}
+  \contentrow
+    {MSc in Computer Science}
+    {
+      from UFSC (thesis named
+      \href{https://repositorio.ufsc.br/handle/123456789/219497}{On the
+      randomness of Rainbow signatures})
+    }
+    {Aug/2018}
+    {Sep/2020}
+    {
+      I was a visiting researcher at Carleton University under
+      a \href{http://archive.is/RHxm4}{Mitacs-CALAREO Globalink Research
+      Award}, and a teaching assistant at UFSC that taught order theory,
+      lattice theory and algebraic structures.
+    }
 
-  Enthusiastic about astronomy, the immersive sim game genre, IBM keyboards
-    specifically older than the author and any song with a saxophone line.
+  \contentrow
+    {BSc in Computer Science}
+    {
+      from UFSC (thesis named
+      \href{https://repositorio.ufsc.br/handle/123456789/187875}{Performance
+      optimization for the Winternitz signature scheme})
+    }
+    {Mar/2013}
+    {Jul/2018}
+    {
+      I was a teaching assistant for a probability and statistics class as
+      a sophomore. Later, as a junior, I started working at the Computer
+      Security Laboratory, developing features for the Brazilian Digital
+      Signature Standard official implementation.
+    }
+\end{contenttable}
+
+\begin{contenttable}{Personal values and interests}
+  I strive to solve problems and deliver elegant solutions with great
+    efficiency, attention to detail, and a minimal number of tools---most
+    likely awk, Bash, tmux and Vim. \\
+
+  I'm also committed to bring out the best of the people working alongside me,
+    through frequent knowledge transfers and a constant feedback loop. \\
+
+  I'm enthusiastic about astronomy, immersive sim games, IBM keyboards
+    specifically older than myself and most songs with a saxophone line. 8)
 \end{contenttable}
 
 \end{document}
