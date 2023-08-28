@@ -11,6 +11,8 @@ a:hover { color:rgba(var(--rgb), 0.8); }
 .c li { list-style:square; padding: 4px; }
 .sa { display:flex; align-items:center; }
 .sa img { border-radius:5px; }
+.sb { width:16px; height:16px; }
+.sc { width:10px; height:10px; }
 .si { margin:0 16px 0 0; }
 .sn { margin:0; }
 .sd { margin:8px 0 0 0; }
