@@ -1,18 +1,23 @@
 \documentclass[12pt]{article}
 
 \usepackage[english]{babel}
-\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[a4paper, top=1cm, bottom=1cm, left=2.5cm, right=2.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[OT1]{fontenc}
 \usepackage[datesep={}]{datetime2}
-\usepackage[colorlinks, urlcolor={blue!45!black}, plainpages=true]{hyperref}
+\usepackage[colorlinks, urlcolor={purple!75!black}, plainpages=true]{hyperref}
 \usepackage[sfdefault]{quattrocento}
-\usepackage{array, multirow, parskip, xcolor}
+\usepackage{array, multirow, parskip, xcolor, pifont}
 
-\newcommand*\ruleline[1]{%
-  \makebox[\linewidth]{#1{\color{blue!45!black}\hspace{1ex}\hrulefill}}}
+\newcommand*{\ruleline}[2]{%
+    \makebox[\linewidth]{#1{\color{purple!75!black}
+        \hspace{2pt}
+        \hrulefill
+        \hspace{2pt}
+        \normalsize{\ding{111}}}}}
 \newcommand*{\sep}{$\cdot\;$}
-\newcommand*{\headername}[2]{\ruleline{\textbf{\Large{#1}} {\scriptsize #2}}}
+
+\newcommand*{\rulesection}[1]{\subsection*{\ruleline{#1}}\vspace{-1pt}}
 
 \newenvironment{headertable}
   {\renewcommand{\arraystretch}{1.4}
@@ -23,9 +28,9 @@
 
 \newcommand*{\headerrow}[2]{#1 & #2 \\}
 
-\newenvironment{contenttable}[2][1.4]
-  {\subsection*{\ruleline{#2}}
-   \renewcommand{\arraystretch}{#1}
+\newenvironment{contenttable}[1]
+  {\rulesection{#1}
+   \renewcommand{\arraystretch}{1.4}
    \newcolumntype{L}{p{0.82\textwidth}}
    \newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.14\textwidth}}
    \begin{tabular}{@{\hspace{0mm}}LR}}
@@ -40,14 +45,14 @@
 
 \begin{document}
 
-\headername{Gustavo Zambonin}{rev. \DTMtoday}
+\section*{\ruleline{Gustavo Zambonin}}
 
 \begin{headertable}
-  \headerrow{About}{
-    I supervise research and development of the Brazilian Digital Signature
-    Standard, and act as a consultant to a breadth of projects related to
-    information security. I specialize in quantum-safe cryptography and
-    public-key infrastructures.
+  \headerrow{About \\[1ex] \scriptsize{(rev. \DTMtoday)}}{
+    I am an information security consultant with 7+ years of experience and
+    a solid academic background. I was a former lead of technical research and
+    development for the Brazilian Digital Signature Standard. I specialize in
+    quantum-safe cryptography and public-key infrastructures.
   }
 
   \headerrow{Address}{
@@ -62,22 +67,6 @@
 
 \begin{contenttable}{Professional experience}
   \contentrow
-    {Software project manager and researcher}
-    {
-      at the Computer Security Lab of the Universidade Federal de Santa
-      Catarina (UFSC)
-    }
-    {May/2016}
-    {Today}
-    {
-      I lead the team whose job is to improve, maintain and add features to the
-      Brazilian Digital Signature Standard official implementation, all derived
-      applications, and normative documents. As a result, we enable any
-      Brazilian citizen to generate and verify digitally signed files according
-      to the latest standards.
-    }
-
-  \contentrow
     {Information security specialist}
     {
       in partnership with several institutions
@@ -85,20 +74,54 @@
     {Sep/2017}
     {Today}
     {
-      I have also worked as a consultant on digital signature standards;
-      a ceremony operator deploying Helios-based e-voting platforms;
+      Some of my roles include acting as a consultant on digital signature
+      standards; a ceremony operator deploying e-voting platforms;
       a quantum-safe blockchain researcher; and a computer forensic examiner
       measuring the accuracy of pictures from speed enforcement cameras.
+      Maybe I can also help you, get in touch!
+    }
+
+  \contentrow
+    {Technical lead and researcher}
+    {
+      at the Computer Security Lab of the Universidade Federal de Santa
+      Catarina (UFSC)
+    }
+    {May/2016}
+    {Feb/2024}
+    {
+      From 2020 onwards, I led the team whose job is to improve, maintain and
+      add features to the Brazilian Digital Signature Standard official
+      implementation, all derived applications, and normative documents. As
+      a result, any Brazilian citizen is able to generate and verify digitally
+      signed files per the latest standards.
+      \vspace{1ex}
+
+      Until 2019, as a software developer at that same team, I implemented
+      several large new features to the signature verification service, such as
+      a new responsive web interface, a REST API, and support for verification
+      of CMS signatures.
     }
 \end{contenttable}
 
 \begin{contenttable}{Education}
   \contentrow
+    {PhD in Computer Science}
+    {
+      at UFSC
+    }
+    {Mar/2024}
+    {Today}
+    {
+      Currently researching novel combinatorial (un)ranking algorithms to
+      generate random objects in quantum-safe cryptosystems.
+    }
+  \contentrow
     {MSc in Computer Science}
     {
-      from UFSC (thesis named
-      \href{https://repositorio.ufsc.br/handle/123456789/219497}{On the
-      randomness of Rainbow signatures})
+      from UFSC (thesis:
+      ``\href{https://repositorio.ufsc.br/handle/123456789/219497}{On the
+      randomness of Rainbow signatures}'')
     }
     {Aug/2018}
     {Sep/2020}
@@ -112,9 +135,9 @@
   \contentrow
     {BSc in Computer Science}
     {
-      from UFSC (thesis named
-      \href{https://repositorio.ufsc.br/handle/123456789/187875}{Performance
-      optimization for the Winternitz signature scheme})
+      from UFSC (thesis:
+      ``\href{https://repositorio.ufsc.br/handle/123456789/187875}{Performance
+      optimization for the Winternitz signature scheme}'')
     }
     {Mar/2013}
     {Jul/2018}
@@ -126,16 +149,16 @@
     }
 \end{contenttable}
 
-\begin{contenttable}{Personal values and interests}
-  I strive to solve problems and deliver elegant solutions with great
-    efficiency, attention to detail, and a minimal number of tools---most
-    likely awk, Bash, tmux and Vim. \\
+\rulesection{Personal values and interests}
 
-  I'm also committed to bring out the best of the people working alongside me,
-    through frequent knowledge transfers and a constant feedback loop. \\
+I strive to solve problems and deliver elegant solutions with great efficiency,
+attention to detail, and a minimal number of tools---most likely AWK, Bash,
+tmux and Vim.
 
-  I'm enthusiastic about astronomy, immersive sim games, IBM keyboards
-    specifically older than myself and most songs with a saxophone line. 8)
-\end{contenttable}
+I'm also committed to bring out the best of the people working alongside me,
+through frequent knowledge transfers and a constant feedback loop.
+
+I'm enthusiastic about astronomy, immersive sim games, IBM keyboards
+specifically older than myself and most songs with a saxophone line. 8)
 
 \end{document}
