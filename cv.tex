@@ -1,13 +1,163 @@
 \documentclass[12pt]{article}
 
+\usepackage{bibentry}
 \usepackage[english]{babel}
 \usepackage[a4paper, top=1cm, bottom=1cm, left=2.5cm, right=2.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[OT1]{fontenc}
 \usepackage[datesep={}]{datetime2}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
 \usepackage[colorlinks, urlcolor={purple!75!black}, plainpages=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
 \usepackage[sfdefault]{quattrocento}
 \usepackage{array, multirow, parskip, xcolor, pifont}
+
+\nobibliography*
+
+\begin{filecontents*}{\jobname.bib}
+@misc{Zambonin:202412,
+ author = {Gustavo Zambonin and Ricardo Custódio and Lucia Moura
+    and Daniel Panario},
+ title = {{Faster combinatorial primitives for efficient hash-based
+    signatures}},
+ note = {In preparation},
+}
+
+@misc{Barbosa:202412,
+ author = {João Pedro Cardoso Barbosa and Gustavo Zambonin
+    and Thaís Bardini Idalino and Ricardo Custódio},
+ title = {{Practical Implementation of a Post-Quantum E-voting Protocol}},
+ note = {In preparation},
+}
+
+@misc{Kamers:202412,
+ author = {Anthony Bernardo Kamers and Paola de Oliveira Abel
+    and Thaís Bardini Idalino and Gustavo Zambonin and Jean Everson Martina},
+ title = {{Practical algorithms and parameters for modification-tolerant
+    signature scheme (extended version)}},
+ note = {Submitted to the Journal of the Brazilian Computer Society},
+}
+
+@misc{Martina:202412,
+ author = {Jean Everson Martina and Larissa Gremelmaier Rosa
+    and Gustavo Zambonin},
+ title = {{From Cat Videos to Catﬁsh: The Case for a New Social Authentication
+    Era}},
+ note = {Submitted to SPW 2025 (Twenty-ninth International Workshop on Security
+    Protocols)},
+}
+
+@misc{Silvano:202412,
+ author = {Wellington Silvano and Lucas Mayr and Gustavo Zambonin
+    and Ricardo Custódio},
+ title = {{Balancing Transparency, Immutability, and Secrecy in Blockchain:
+    Extending Shannon’s Secrecy}},
+ note = {In preparation},
+}
+
+@misc{Rosa:202412,
+ author = {Larissa Gremelmaier Rosa and Gustavo Zambonin
+    and Jean Everson Martina},
+ title = {{Enhanced SIM swap security practices via ceremony modeling}},
+ note = {Submitted to AINA 2025 (39th International Conference on Advanced
+    Information Networking and Applications)},
+}
+
+@misc{Mayr:202408,
+ doi = {10.48550/arXiv.2208.03951},
+ author = {Lucas Mayr and Gustavo Zambonin and Frederico Schardong
+    and Ricardo Custódio},
+ title = {{One-Time Certificates for Reliable and Secure Document Signing}},
+ year = 2024,
+ month = aug,
+ note = {\url{https://doi.org/10.48550/arXiv.2208.03951}},
+}
+
+@inproceedings{Kamers:202409,
+ doi = {10.5753/sbseg.2024.241677},
+ author = {Anthony Bernardo Kamers and Paola de Oliveira Abel
+    and Thaís Bardini Idalino and Gustavo Zambonin and Jean Everson Martina},
+ title = {{Practical algorithms and parameters for modification-tolerant
+    signature scheme}},
+ year = 2024,
+ month = sep,
+ booktitle = {{Proceedings of the 24th Brazilian Symposium on Information and
+    Computational Systems Security (SBSeg 2024)}},
+ editor = {Altair Santin and Raphael Machado},
+ pages = {522--537},
+ note = {\url{https://doi.org/10.5753/sbseg.2024.241677}},
+}
+
+@article{Biage:202401,
+ doi = {10.1109/ACCESS.2024.3358670},
+ author = {Gustavo de Castro Biage and Gustavo Zambonin
+    and Thaís Bardini Idalino and Daniel Panario and Ricardo Custódio},
+ title = {{A concrete LIP-based KEM with simple lattices}},
+ year = 2024,
+ month = jan,
+ journal = {{IEEE Access}},
+ volume = 12,
+ pages = {16408--16420},
+ note = {\url{https://doi.org/10.1109/ACCESS.2024.3358670}},
+}
+
+@article{Mayr:202309,
+ doi = {10.3390/info14100523},
+ author = {Lucas Mayr and Lucas Palma and Gustavo Zambonin
+    and Wellington Silvano and Ricardo Custódio},
+ title = {{Monitoring key pair usage through distributed ledgers and one-time
+    signatures}},
+ year = 2023,
+ month = sep,
+ journal = {{Information}},
+ volume = 14,
+ number = 10,
+ pages = {523--537},
+ note = {\url{https://doi.org/10.3390/info14100523}},
+}
+
+@article{Perin:202106,
+ doi = {10.1007/s13389-021-00264-9},
+ author = {Lucas Pandolfo Perin and Gustavo Zambonin and Ricardo Custódio
+    and Lucia Moura and Daniel Panario},
+ title = {{Improved constant-sum encodings for hash-based signatures}},
+ year = 2021,
+ month = jun,
+ journal = {{Journal of Cryptographic Engineering}},
+ volume = 11,
+ number = 4,
+ pages = {329--351},
+ note = {\url{https://doi.org/10.1007/s13389-021-00264-9}},
+}
+
+@inproceedings{Zambonin:201907,
+ doi = {10.1007/978-3-030-23696-0_20},
+ author = {Gustavo Zambonin and Matheus Silva Pinheiro Bittencourt
+     and Ricardo Custódio},
+ title = {{Handling Vinegar Variables to Shorten Rainbow Private Keys}},
+ year = 2019,
+ month = jul,
+ booktitle = {{Progress in Cryptology -- AFRICACRYPT 2019}},
+ editor = {Johannes Buchmann and Abderrahmane Nitaj and Tajjeeddine Rachidi},
+ pages = {391--408},
+ series = {Lecture Notes in Computer Science},
+ volume = 11627,
+ note = {\url{https://doi.org/10.1007/978-3-030-23696-0_20}},
+}
+
+@inproceedings{Perin:201806,
+ doi = {10.1109/ISCC.2018.8538642},
+ author = {Lucas Pandolfo Perin and Gustavo Zambonin
+    and Douglas Marcelino Beppler Martins and Ricardo Custódio
+    and Jean Everson Martina},
+ title = {{Tuning the Winternitz Hash-Based Digital Signature Scheme}},
+ year = 2018,
+ month = jun,
+ booktitle = {{2018 IEEE Symposium on Computers and Communications (ISCC)}},
+ pages = {537--542},
+ note = {\url{https://doi.org/10.1109/ISCC.2018.8538642}},
+}
+\end{filecontents*}
 
 \newcommand*{\ruleline}[2]{%
     \makebox[\linewidth]{#1{\color{purple!75!black}
@@ -65,45 +215,6 @@
   }
 \end{headertable}
 
-\begin{contenttable}{Professional experience}
-  \contentrow
-    {Information security specialist}
-    {
-      in partnership with several institutions
-    }
-    {Sep/2017}
-    {Today}
-    {
-      Some of my roles include acting as a consultant on digital signature
-      standards; a ceremony operator deploying e-voting platforms;
-      a quantum-safe blockchain researcher; and a computer forensic examiner
-      measuring the accuracy of pictures from speed enforcement cameras.
-      Maybe I can also help you, get in touch!
-    }
-
-  \contentrow
-    {Technical lead and researcher}
-    {
-      at the Computer Security Lab of the Universidade Federal de Santa
-      Catarina (UFSC)
-    }
-    {May/2016}
-    {Feb/2024}
-    {
-      From 2020 onwards, I led the team whose job is to improve, maintain and
-      add features to the Brazilian Digital Signature Standard official
-      implementation, all derived applications, and normative documents. As
-      a result, any Brazilian citizen is able to generate and verify digitally
-      signed files per the latest standards.
-      \vspace{1ex}
-
-      Until 2019, as a software developer at that same team, I implemented
-      several large new features to the signature verification service, such as
-      a new responsive web interface, a REST API, and support for verification
-      of CMS signatures.
-    }
-\end{contenttable}
-
 \begin{contenttable}{Education}
   \contentrow
     {PhD in Computer Science}
@@ -149,6 +260,73 @@
     }
 \end{contenttable}
 
+\rulesection{Publications}
+
+\bibentry{Zambonin:202412}.
+
+\bibentry{Barbosa:202412}.
+
+\bibentry{Kamers:202412}.
+
+\bibentry{Martina:202412}.
+
+\bibentry{Silvano:202412}.
+
+\bibentry{Rosa:202412}.
+
+\bibentry{Mayr:202408}.
+
+\bibentry{Kamers:202409}.
+
+\bibentry{Biage:202401}.
+
+\bibentry{Mayr:202309}.
+
+\bibentry{Perin:202106}.
+
+\bibentry{Zambonin:201907}.
+
+\bibentry{Perin:201806}.
+
+\begin{contenttable}{Professional experience}
+  \contentrow
+    {Information security specialist}
+    {
+      in partnership with several institutions
+    }
+    {Sep/2017}
+    {Today}
+    {
+      Some of my roles include acting as a consultant on digital signature
+      standards; a ceremony operator deploying e-voting platforms;
+      a quantum-safe blockchain researcher; and a computer forensic examiner
+      measuring the accuracy of pictures from speed enforcement cameras.
+      Maybe I can also help you, get in touch!
+    }
+
+  \contentrow
+    {Technical lead and researcher}
+    {
+      at the Computer Security Lab of the Universidade Federal de Santa
+      Catarina (UFSC)
+    }
+    {May/2016}
+    {Feb/2024}
+    {
+      From 2020 onwards, I led the team whose job is to improve, maintain and
+      add features to the Brazilian Digital Signature Standard official
+      implementation, all derived applications, and normative documents. As
+      a result, any Brazilian citizen is able to generate and verify digitally
+      signed files per the latest standards.
+      \vspace{1ex}
+
+      Until 2019, as a software developer at that same team, I implemented
+      several large new features to the signature verification service, such as
+      a new responsive web interface, a REST API, and support for verification
+      of CMS signatures.
+    }
+\end{contenttable}
+
 \rulesection{Personal values and interests}
 
 I strive to solve problems and deliver elegant solutions with great efficiency,
@@ -160,5 +338,8 @@ through frequent knowledge transfers and a constant feedback loop.
 
 I'm enthusiastic about astronomy, immersive sim games, IBM keyboards
 specifically older than myself and most songs with a saxophone line. 8)
+
+\bibliographystyle{abbrv}
+\nobibliography{\jobname}
 
 \end{document}
